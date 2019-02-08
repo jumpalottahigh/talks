@@ -1,47 +1,54 @@
-import { TwitterTweetEmbed } from 'react-twitter-embed'
 import { Appear } from 'mdx-deck'
 
 # What is Gatsby?
 
+<Appear>Static site generator that rehydrates into a React app</Appear>
+
 ---
 
-# Gatsby is a Static <span className="faded">Site</span>/<a href="https://www.gatsbyjs.org/docs/progressive-web-app" className="gatsby">PWA</a> Generator for React
+# What does Gatsby give you?
+
+<Appear>- Performance</Appear>
+<Appear>- SEO</Appear>
+<Appear>- Tooling</Appear>
 
 ```notes
-- Produces just! static HTML
-- "Web Compiler"
+- Sample notes
 ```
 
 ---
 
-# static files !== static app
+# Why Gatsby?
 
-<Appear>
-  <h2 style={{ textAlign: 'center' }}>
-    Gatsby rehydrates into a <span className="blue">React</span> app
-  </h2>
-</Appear>
+- Engineered for performance from the get-to
+- In legacy codebases we all know how hard it could be to work for performance - tech debt, a feature here, an improvement there
 
 ```notes
-- You could describe it as create-react-app with SSR files
+- Sample notes
 ```
 
 ---
 
-<TwitterTweetEmbed
-  style={{ marginTop: '6rem' }}
-  tweetId="1068958188530069505"
-  options={{ cards: 'hidden' }}
-/>
+# What can you build with Gatsby?
+
+- Landing pages
+- Ecommerce
+- PWAs
+
+```notes
+- notes here
+```
 
 ---
 
-## Blazingly fast by default
+# A few showcase slides with images
 
-```notes
-- Gatsby was designed in a way that it is really hard to build a slow site
-- Adding service workers etc. to fulfill PWA specs is easy
-```
+3rd party projects: Find some advanced examples out there. or some simple and slick ones. show SHOWCASE site
+
+- elementsofai
+- store.gatsbyjs.org
+
+[insert images]
 
 <img
   style={{ marginTop: 'var(--t-m)' }}
@@ -51,92 +58,22 @@ import { Appear } from 'mdx-deck'
 
 ---
 
-# How?
+# Showcase of some of my projects
 
-<ul>
-  <Appear>
-    <li>
-      Follows the <a href="https://www.gatsbyjs.org/docs/prpl-pattern/">PRPL</a>{' '}
-      pattern
-    </li>
-    <li>Route-based code splitting</li>
-    <li>Lazy-Loading pages whose links are in the viewport</li>
-    <li>Inlining of critical resources</li>
-    <li>Query only the data you need</li>
-    <li>Simple to do, high performant image optimizations</li>
-  </Appear>
-</ul>
-
-```notes
-- Push critical resources, render initial route, pre-cache routes, lazy-load content
-- Loading components for routes, not all at once
-- Using Intersection Observer for lazy-loading
-- CSS/JS above the fold gets inlined
-```
+- solve practical problems - generate THOUSANDS OF images and make a super performant page in a few minutes and less than 50 lines of code. So powerful!: campaign-catalog
+- generate hundreds of pages hassle free: baehrbg.com
 
 ---
 
-## Life of a Gatsby app
+# Why performance matters
 
-text here
-
-```notes
-- Node APIs to laod any data source into GraphQL
-- Static Build & Deploy to FTP/Netlify (It's just HTML/CSS/JS). No server needed!
-- Simpler deployment & reduced DevOps
-- Rehydration into React App
-- Dynamic data fetching with e.g. Apollo possible
-```
+- users are impatient
+- KPIs - bounce rates, real disappointments, real money
+- bandwidth is expensive
+- the next 1 billion user on the internet
 
 ---
 
-## GraphQL
+# Interactive demo
 
-<iframe
-  style={{ height: '600px', width: '1200px', marginTop: 'var(--t-m)' }}
-  src="https://711808k40x.sse.codesandbox.io/___graphql?query=%7B%0A%20%20site%20%7B%0A%20%20%20%20siteMetadata%20%7B%0A%20%20%20%20%20%20title%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A"
-/>
-
-```notes
-- GraphQL is a query language and runtime that we can use to build and expose APIs as a strongly-typed schema instead of hundreds of REST endpoints
-- You pick what you need
-- It's fast & flexible
-- Better search
-- Single Source of Truth
-- Scales with your app
-- Consistent with every data source
-```
-
----
-
-## gatsby-image
-
-another image here
-
-```notes
-- Loads optimal size of image for every device
-- Loading effects
-- Lazy-Loading
-- Resizing, Formatting, Effects, Cropping possible
-```
-
----
-
-## Gatsby by analogies
-
-<ul>
-  <Appear>
-    <li>
-      Start off with a pre-configured development environment and build process
-      (high-performance car)
-    </li>
-    <li>
-      Benefit from built-in performance optimization (Neo’s Matrix skills)
-    </li>
-    <li>
-      Leverage static site delivery and web app experience (Compressed mattress)
-    </li>
-    <li>Prefetch resources for snappy routing (Psychic delivery person)</li>
-    <li>Consolidate data sourcing and transformations (Amazon)</li>
-  </Appear>
-</ul>
+Some demo here
