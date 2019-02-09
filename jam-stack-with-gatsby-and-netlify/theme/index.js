@@ -7,9 +7,6 @@ export default {
   ...theme,
   colors: {
     ...theme.colors
-    // text: 'var(--text)',
-    // heading: 'var(--black)',
-    // link: 'var(--gatsby)'
   },
   link: {
     textDecoration: 'none'

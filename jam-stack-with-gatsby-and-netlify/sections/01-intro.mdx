@@ -8,7 +8,10 @@ import { Appear, Head } from 'mdx-deck'
     content="https://jam-stack-with-gatsby-and-netlify.netlify.com"
   />
   <meta property="og:title" content="JAMstack with Gatsby and Netlify" />
-  <meta property="og:description" content="TODO: Fill this in" />
+  <meta
+    property="og:description"
+    content="A talk about JAMstack, Gatsby and Netlify"
+  />
   <meta
     property="og:image"
     content="https://blog.georgi-yanev.com/static/getting-started-with-software-development-1-61fe27ec8f41f8d457f91c70f3eee061.png"
@@ -20,11 +23,14 @@ import { Appear, Head } from 'mdx-deck'
     content="https://blog.georgi-yanev.com/static/getting-started-with-software-development-1-61fe27ec8f41f8d457f91c70f3eee061.png"
   />
   <meta name="twitter:title" content="JAMstack with Gatsby and Netlify" />
-  <meta name="twitter:description" content="TODO: Fill this in" />
+  <meta
+    name="twitter:description"
+    content="A talk about JAMstack, Gatsby and Netlify"
+  />
 </Head>
 
-import { Tagline } from '../components'
 import '../theme/script'
+import { Image } from '../components'
 
 # Beginning hook
 
@@ -42,11 +48,25 @@ What's common between this site and this site?\*
 # JAMstack with:<br/> Gatsby and Netlify
 
 <Appear>
-  const [Gastby, Netlify] = JAMstack
-  <br />
-  Or building the web for the next 1 billion users.
-  <br />
-  Building for performance!
+  <span>
+    <img
+      style={{ width: '200px' }}
+      src={require('file-loader!../assets/jam.png')}
+      alt="JAMstack"
+    />
+  </span>
+  <span>
+    <img
+      src={require('file-loader!../assets/gatsby.svg')}
+      style={{ width: '500px' }}
+      alt="Gatsby"
+    />
+    <img
+      style={{ width: '500px' }}
+      src={require('file-loader!../assets/netlify.svg')}
+      alt="Netlify"
+    />
+  </span>
 </Appear>
 
 ```notes
@@ -56,7 +76,13 @@ What's common between this site and this site?\*
 
 ---
 
-# Hi, I' Georgi
+Follow along at:
+
+https://jam-stack-with-gatsby-and-netlify.netlify.com
+
+---
+
+# 👋 Hi, HelsinkiJS, I'm Georgi
 
 [Insert video of?]
 A few more subslides with some media
