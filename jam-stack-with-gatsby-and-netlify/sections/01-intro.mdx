@@ -1,3 +1,4 @@
+import InstagramEmbed from 'react-instagram-embed'
 import { Appear, Head } from 'mdx-deck'
 
 <Head>
@@ -32,14 +33,29 @@ import { Appear, Head } from 'mdx-deck'
 import '../theme/script'
 import { Image } from '../components'
 
-# Beginning hook
+# 👋 Hi, HelsinkiJS
 
-What's common between this site and this site?\*
+---
+
+# Hi,
+
+<span>
+  <img
+    style={{ width: '650px' }}
+    src={require('file-loader!../assets/helsinki-js.png')}
+    alt="JAMstack"
+  />
+</span>
 
 ```notes
-- show a few JAMstack examples*
-- serious but fun
-- start with a hook (I thought I'd start this presentation with a hook (show pic of a react hook code) to get your attention)
+
+SCRIPT: serious but fun; TODO: consider saying something bold or interesting to grab attention
+
+TALK:
+
+- Main motivation is to share with you something that's a joy to develop with
+- And works pretty nicely
+- Additionally it's one of the easiest ways to try out React and GraphQL if you are into that sort of stuff
 
 ```
 
@@ -70,8 +86,8 @@ What's common between this site and this site?\*
 </Appear>
 
 ```notes
-- Title slides
-- Official topic introduction
+- We will go over what these mean
+- We will have a few practical examples
 ```
 
 ---
@@ -79,17 +95,66 @@ What's common between this site and this site?\*
 Follow along at:
 
 https://jam-stack-with-gatsby-and-netlify.netlify.com
+TODO: after this slide put the link to the bottom left or center and maybe twitter handle at bottom right
+
+```notes
+- The slides are created with mdx-deck and you can follow along at that URL
+```
 
 ---
 
-# 👋 Hi, HelsinkiJS, I'm Georgi
+# I'm Georgi
+
+- web developer @ F-Secure
+- contribute to open source
+- fly FPV drones
 
 [Insert video of?]
 A few more subslides with some media
 Twitter, Github links
 
 ```notes
-- web developer @ F-Secure
-- contribute to open source
-- fly FPV drones
+- We build campaign landing pages and product pages
+- I build and fly FPV drones
 ```
+
+---
+
+<video autoPlay="true" muted="true" playsinline="" class="fade-in">
+  <source
+    src="https://www.georgi-yanev.com/static/landing-a-quad-1-d1a878f7ef756c703ebeeecdb529e63e.webm"
+    type="video/webm"
+  />
+  <source
+    src="https://www.georgi-yanev.com/static/landing-a-quad-1-a959ba1dfed1d6abe2e8052b61bfb0b4.mp4"
+    type="video/mp4"
+  />
+  Tap to play video
+</video>
+
+---
+
+<InstagramEmbed
+  url="https://instagr.am/p/BqUPyt7l1al/"
+  maxWidth={320}
+  hideCaption={false}
+  containerTagName="div"
+/>
+
+---
+
+<InstagramEmbed
+  url="https://instagr.am/p/Bil9iRqhe-T/"
+  maxWidth={320}
+  hideCaption={false}
+  containerTagName="div"
+  style={{ display: 'inline-block' }}
+/>
+
+<InstagramEmbed
+  url="https://instagr.am/p/Bh4r51VAM41/"
+  maxWidth={320}
+  hideCaption={false}
+  containerTagName="div"
+  style={{ display: 'inline-block' }}
+/>

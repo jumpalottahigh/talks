@@ -1,5 +1,5 @@
 import Intro from './sections/01-intro.mdx'
-import Introduction from './sections/02-introduction.mdx'
+import JAMstack from './sections/02-jamstack.mdx'
 import Why from './sections/03-why.mdx'
 import Showcase from './sections/04-showcase.mdx'
 import Payoff from './sections/05-payoff.mdx'
@@ -10,7 +10,7 @@ export { default as theme } from './theme'
 
 export default [
   ...Intro,
-  ...Introduction,
+  ...JAMstack,
   ...Why,
   ...Showcase,
   ...Payoff,

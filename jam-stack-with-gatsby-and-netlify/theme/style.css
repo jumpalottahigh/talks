@@ -8,38 +8,14 @@
   --m-t-3: 3rem;
 }
 
-a {
-  text-decoration: none;
+img.full-screen {
+  max-height: calc(100vh - 40px);
 }
 
-.language-notes {
-  font-size: 1.5rem;
+h1 {
+  text-align: center;
 }
 
-.gatsby {
-  color: var(--gatsby);
-}
-
-.faded {
-  opacity: 0.5;
-}
-
-.blue {
-  color: var(--blue);
-}
-
-ul {
-  font-size: 1.15em !important;
-}
-
-ul li {
-  font-size: 1.15em;
-  line-height: 1.45em;
-}
-
-.demo-link {
-  color: var(--white);
-  background: var(--gatsby);
-  padding: 1rem 2rem;
-  text-decoration: none;
+.twitter-tweet {
+  margin: 0 auto;
 }
