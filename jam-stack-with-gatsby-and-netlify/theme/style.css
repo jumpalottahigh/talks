@@ -19,3 +19,21 @@ h1 {
 .twitter-tweet {
   margin: 0 auto;
 }
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.intro-grid .jam {
+  grid-row: 1 / -1;
+  width: 17vw;
+}
+
+.intro-grid .gatsby,
+.intro-grid .netlify {
+  width: 30vw;
+}
