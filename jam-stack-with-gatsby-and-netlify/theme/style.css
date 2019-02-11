@@ -37,3 +37,13 @@ h1 {
 .intro-grid .netlify {
   width: 30vw;
 }
+
+ul {
+  max-width: 60vw;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+a {
+  color: #07f;
+}

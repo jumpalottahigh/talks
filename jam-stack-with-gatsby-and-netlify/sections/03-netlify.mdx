@@ -1,20 +1,27 @@
-# const { Netlify } = JAMstack
+import { Appear } from 'mdx-deck'
+
+<img
+  src={require('file-loader!../assets/netlify.svg')}
+  className="full-screen"
+  style={{ width: '80vw' }}
+  alt="Netlify"
+/>
+
+<ul>
+  <Appear>
+    <li>Dev Experience 💜</li>
+    <li>CDN</li>
+    <li>SSL certificates (Let's Encrypt, auto renewing)</li>
+    <li>CI with a GitHub repo</li>
+    <li>Auto PR previews!</li>
+    <li>Forms, Identity, A/B tests if you are into that sort of thing</li>
+    <li>TODO: refine; add more</li>
+  </Appear>
+</ul>
 
 ---
 
-# Netlify
-
-- Dev Experience 💜
-- CDN
-- SSL certificates (Let's Encrypt, auto renewing)
-- CI with a GitHub repo
-- Auto PR previews!
-- Forms, Identity, A/B tests if you are into that sort of thing
-- TODO: refine; add more
-
----
-
-# 30 sec deploy demo
+# 30 sec deploy <a href="https://app.netlify.com">demo</a>
 
 ```notes
 
