@@ -4,7 +4,7 @@ import { TwitterTweetEmbed } from 'react-twitter-embed'
 <img
   src={require('file-loader!../assets/gatsby.svg')}
   className="full-screen"
-  style={{ width: '80vw' }}
+  style={{ maxWidth: '80vw', height: '22vh' }}
   alt="Gatsby"
 />
 
@@ -18,38 +18,85 @@ import { TwitterTweetEmbed } from 'react-twitter-embed'
     <li>Dev Experience</li>
     <li>Rich ecosystem</li>
     <li>Amazing community 💜</li>
-    <li>Somone might have said could be ran on a toaster</li>
   </Appear>
 </ul>
 
 ```notes
-- Hot takes: can get a score of 70+ on a toaster at CDN Edge
-- if someone is looking for a side project :D
+- Gatsby is engineered for performance from the ground up. Starts off with a Lighthouse score of 100 across the board.
+
+- Webpack, Babel, Prettier, ESLint, whatever you may be used to in a modern project
+
+- GraphQL! Source plugins allow you to pull data from many CMS's and more. Contentful, Wordpress, Twitter, Shopify, Sanity, Stripe, IG, Trello,
+
+- Drop in the generated files on any static file host
+
+- PWA bootstrapper
+
+- Awesome Dev Experience
+
+- Many plugins and starters to get you going or to learn from
+
+- The community is very passionate about the project and there are many contributors. It's easy to get started too.
+
 ```
-
----
-
-<TwitterTweetEmbed tweetId="1083999310168162304" />
 
 ---
 
 <img
   src={require('file-loader!../assets/gatsby-architecture.png')}
-  style={{ width: '80vw' }}
+  style={{ maxWidth: '80vw', maxHeight: '95vh' }}
   alt="Gatsby architecture"
 />
 
+```notes
+- Architecture
+
+- Fetch data from various sources
+
+- Process data and expose GraphQL schema for querying
+
+- Build your app with React components
+
+- Deploy to Netlify, AWS S3, GitHub Pages and more
+```
+
 ---
 
-# Docs, starters, plugins
+# Move here
 
-- Docs: tutorial
-- Docs: quick start
--
+1. High level overview of features
+2. Architecture
+3. Performance and why performance is important
+4. Showcase and What can you build with Gatsby
+5. Getting started (npx, codesandbox)
+6. Starters
+7. Plugins and breakdown of types and roles
+8. Demo (graphiql, etc.)
+9. Learning
+10. Contribute
+
+---
+
+# Getting Started
+
+<ul>
+  <li>$ npx gatsby new my-site</li>
+  <li>
+    <a href="https://codesandbox.io/s/">CodeSandbox</a>
+  </li>
+</ul>
+
+```notes
+- Bootstrap a new project using npx
+
+- Try it in CodeSandbox
+```
 
 ---
 
 # Plugins
+
+- Plugins break down, explaing types and roles
 
 Chunks of reusable functionality, shared with the community.
 
@@ -89,6 +136,10 @@ Things like Google Analytics, for example. No need to reinvent the wheel. Use th
 
 ---
 
+# CodeSandbox embed for some reason
+
+---
+
 # What does Gatsby give you?
 
 <Appear>- PWA</Appear>
@@ -99,6 +150,17 @@ Things like Google Analytics, for example. No need to reinvent the wheel. Use th
 
 ```notes
 - TODO: Make a very detailed slide or a few slides here; Images
+```
+
+---
+
+<TwitterTweetEmbed tweetId="1083999310168162304" />
+
+Somone might have said could be ran on a toaster
+
+```notes
+- Hot takes: can get a score of 70+ on a toaster at CDN Edge
+- if someone is looking for a side project :D
 ```
 
 ---
@@ -215,3 +277,33 @@ Some demo here
 ```notes
 - gatsby can be very powerful - show example of a copy of the campaign catalog site to show how far you can get just with 10 lines of code. maybe with rendering sub pages for each of those sites too? 600+ pages real quick?
 ```
+
+---
+
+# Learning resources
+
+- Docs
+- Tutorial
+- LevelUpTuts
+- Learning from other starters or projects
+
+```notes
+- Follow tutorial, the docs are pretty solid
+
+- Look up things as you need them
+```
+
+---
+
+# Contribute to Gatsby
+
+- Easy to get started
+- Get swag
+
+```notes
+- Speaking of which, if you are looking into contributing to open source, consider starting with Gatsby.
+
+- People are very helpful! And you can even have a pair programming session with a member of the Ink team.
+```
+
+---
