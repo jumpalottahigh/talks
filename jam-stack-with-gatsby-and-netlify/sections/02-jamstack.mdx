@@ -4,6 +4,10 @@ import { Split } from 'mdx-deck/layouts'
 
 # What is JAMstack?
 
+```notes
+Let's have a quick overview, but also let's not get lost in definitions
+```
+
 ---
 
 <img
@@ -51,6 +55,10 @@ _"Templated markup should be **prebuilt at deploy time**, usually using a **site
 
 ---
 
+# Some examples
+
+---
+
 <img
   src={require('file-loader!../assets/jamstack-examples.png')}
   className="full-screen"
@@ -59,6 +67,8 @@ _"Templated markup should be **prebuilt at deploy time**, usually using a **site
 
 ```notes
 - Check the examples section at jamstack.org
+- Any framework / library
+- Headless CMS's and APIs
 ```
 
 ---
@@ -71,7 +81,12 @@ _"Templated markup should be **prebuilt at deploy time**, usually using a **site
 - Better Developer Experience
 
 ```notes
-- The core ideas are revolving around: ...
+- This is the more interesting part.
+- The ultimate goal of the approach.
+- (BP) Prebuilt HTML from the CDN edge = fast!
+- (HS) Less server side processes = less attack surface
+- (CES) Scaling is easy and efficient for static files
+- (BDE) Less things to maintain and faster time to deploy
 ```
 
 ---
@@ -82,7 +97,7 @@ _"Templated markup should be **prebuilt at deploy time**, usually using a **site
 - Not about specific technologies (use your flavor)
 
 ```notes
-
+- All of that being said, ...
 - It's not the answer to all problems; Just a particular approach
 - Ultimately engineering is all about making the right trade-offs based on your use case
 ```
@@ -118,6 +133,9 @@ export default Split
 />
 
 ```notes
-- Article by Addy Osmani and Jason Miller from the Google Chrome team
+- A couple of resouces from the last few weeks worth checking out are:
+
+- Article by Addy Osmani and Jason Miller from the Google Chrome team comparing SSR, CSR and hybrid approaches
+
 - Video by Surma and Jake from Google Chrome team
 ```

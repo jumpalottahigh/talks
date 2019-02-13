@@ -1,6 +1,103 @@
+import { Appear, Head, Image } from 'mdx-deck'
+import { Invert, Split, SplitRight, FullScreenCode } from 'mdx-deck/layouts'
+import CustomLayout from '../components/layout'
+
 # Resources
 
 https://developers.google.com/web/updates/2019/02/rendering-on-the-web
 https://blogs.windows.com/msedgedev/2018/10/04/edgehtml-18-october-2018-update/
 https://bugzilla.mozilla.org/show_bug.cgi?id=1294490
 https://www.chromestatus.com/feature/5641405942726656
+
+---
+
+# TODO: Remove when done - Testing different layouts
+
+---
+
+<Image
+  src={require('file-loader!../assets/jamstack-examples.png')}
+  alt="JAMstack"
+/>
+
+---
+
+export default CustomLayout
+
+# CustomLayout
+
+---
+
+export default Invert
+
+# Inverted Slide
+
+---
+
+export default Split
+
+<img
+  style={{ maxWidth: '100%' }}
+  src={require('file-loader!../assets/helsinki-js.png')}
+  alt="JAMstack"
+/>
+
+## Split Slide
+
+---
+
+export default SplitRight
+
+<img
+  style={{ maxWidth: '100%' }}
+  src={require('file-loader!../assets/helsinki-js.png')}
+  alt="JAMstack"
+/>
+
+## Split Slide
+
+---
+
+export default FullScreenCode
+
+```jsx
+<Button>Beep</Button>
+```
+
+---
+
+# Hi,
+
+<span>
+  <img
+    style={{ width: '650px' }}
+    src={require('file-loader!../assets/helsinki-js.png')}
+    alt="JAMstack"
+  />
+</span>
+
+---
+
+export default Split
+
+<div>
+  <img src={require('file-loader!../assets/jam.png')} alt="JAMstack" />
+</div>
+
+<div>
+  <img src={require('file-loader!../assets/gatsby.svg')} alt="Gatsby" />
+  <img src={require('file-loader!../assets/netlify.svg')} alt="Netlify" />
+</div>
+
+---
+
+Follow along at:
+
+https://jam-stack-with-gatsby-and-netlify.netlify.com
+TODO: after this slide put the link to the bottom left or center and maybe twitter handle at bottom right
+
+```notes
+- The slides are created with mdx-deck and you can follow along at that URL
+```
+
+---

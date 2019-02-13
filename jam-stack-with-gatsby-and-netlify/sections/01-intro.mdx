@@ -1,5 +1,5 @@
 import InstagramEmbed from 'react-instagram-embed'
-import { Appear, Head, Image } from 'mdx-deck'
+import { Appear, Head } from 'mdx-deck'
 import { Invert, Split, SplitRight, FullScreenCode } from 'mdx-deck/layouts'
 import CustomLayout from '../components/layout'
 import '../theme/script'
@@ -33,72 +33,9 @@ import '../theme/script'
   />
 </Head>
 
-<Image
-  src={require('file-loader!../assets/jamstack-examples.png')}
-  alt="JAMstack"
-/>
-
----
-
-export default CustomLayout
-
-# CustomLayout
-
----
-
-export default Invert
-
-# Inverted Slide
-
----
-
-export default Split
-
-<img
-  style={{ maxWidth: '100%' }}
-  src={require('file-loader!../assets/helsinki-js.png')}
-  alt="JAMstack"
-/>
-
-## Split Slide
-
----
-
-export default SplitRight
-
-<img
-  style={{ maxWidth: '100%' }}
-  src={require('file-loader!../assets/helsinki-js.png')}
-  alt="JAMstack"
-/>
-
-## Split Slide
-
----
-
-export default FullScreenCode
-
-```jsx
-<Button>Beep</Button>
-```
-
----
-
 export default CustomLayout
 
 # 👋 Hi, HelsinkiJS
-
----
-
-# Hi,
-
-<span>
-  <img
-    style={{ width: '650px' }}
-    src={require('file-loader!../assets/helsinki-js.png')}
-    alt="JAMstack"
-  />
-</span>
 
 ```notes
 
@@ -139,17 +76,6 @@ TALK:
 ```notes
 - We will go over what these mean
 - We will have a few practical examples
-```
-
----
-
-Follow along at:
-
-https://jam-stack-with-gatsby-and-netlify.netlify.com
-TODO: after this slide put the link to the bottom left or center and maybe twitter handle at bottom right
-
-```notes
-- The slides are created with mdx-deck and you can follow along at that URL
 ```
 
 ---

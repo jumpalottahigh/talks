@@ -3,21 +3,47 @@ import { Appear } from 'mdx-deck'
 <img
   src={require('file-loader!../assets/netlify.svg')}
   className="full-screen"
-  style={{ width: '80vw' }}
+  style={{ maxWidth: '80vw', height: '22vh' }}
   alt="Netlify"
 />
 
 <ul>
   <Appear>
     <li>Dev Experience 💜</li>
-    <li>CDN</li>
-    <li>SSL certificates (Let's Encrypt, auto renewing)</li>
-    <li>CI with a GitHub repo</li>
-    <li>Auto PR previews!</li>
-    <li>Forms, Identity, A/B tests if you are into that sort of thing</li>
-    <li>TODO: refine; add more</li>
+    <li>Free Tier</li>
+    <li>Application Delivery Network (ADN)</li>
+    <li>Continuous Deployment</li>
+    <li>SSL Certificates</li>
+    <li>Custom Domain</li>
+    <li>Auto PR Previews!</li>
+    <li>Netlify Functions</li>
+    <li>Netlify Identity</li>
+    <li>Netlify Forms</li>
   </Appear>
 </ul>
+
+```notes
+- You might have heard people praising Netlify. Setting up CI deploys from a GitHub repo takes only a few seconds!
+
+- Might have to scale quite a lot by the time you actually need to pay for anything
+
+- Some benefits on top of traditional CDN - ability to build apps and has CI
+
+- Builds and deploys when you push to your GitHub repo
+
+- Free auto-renewing certificate with Let's Encrypt. Let's be honest, in 2019 https is a requirement and good for security, SEO and required for HTTP/2
+
+- Buy or setup a custom domain in a few seconds
+
+- On every PR submitted you get a preview build live at a URL without doing anything. So cool!
+
+- Netlify Functions = AWS lambda without any setup
+
+- Netlify Identity - a way to manage sign up, logins, gates content
+
+- Add a `netlify` attribute to a form and get form data submissions right into Netlify
+
+```
 
 ---
 
