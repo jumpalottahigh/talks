@@ -26,7 +26,8 @@ Let's have a quick overview, but also let's not get lost in definitions
 # const { J } = JAM
 
 _"Any dynamic programming during the request/response cycle is handled by **JavaScript, running entirely on the client**. This could be **any** frontend framework, library, or even vanilla JavaScript."_
--  TODO: highlight the items in another color to be visible on projector
+
+- TODO: highlight the items in another color to be visible on projector
 
 ```notes
 - This is where we will focus today
@@ -116,12 +117,10 @@ _"Templated markup should be **prebuilt at deploy time**, usually using a **site
 
 ---
 
-- TODO: make this bigger!
-
 <TwitterTweetEmbed
   tweetId="1093223382223605762"
-  options={{ height: 800}}
-  style={{ width: '80vw'}}
+  options={{ height: 800 }}
+  style={{ width: '100vw', height: '100vh' }}
 />
 
 ```notes
@@ -129,6 +128,15 @@ _"Templated markup should be **prebuilt at deploy time**, usually using a **site
 
 - Article by Addy Osmani and Jason Miller from the Google Chrome team comparing SSR, CSR and hybrid approaches
 ```
+
+---
+
+<img
+  src={require('file-loader!../assets/infographic.png')}
+  className="full-screen"
+  alt="Server vs Browser rendering diagram"
+  style={{ maxHeight: '90vh' }}
+/>
 
 ---
 

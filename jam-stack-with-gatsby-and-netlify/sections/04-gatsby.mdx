@@ -42,6 +42,10 @@ import { TwitterTweetEmbed } from 'react-twitter-embed'
 
 ---
 
+# One of the easiest ways to try out React and/or GraphQL with no prior experience
+
+---
+
 <img
   src={require('file-loader!../assets/gatsby-architecture.png')}
   style={{ maxWidth: '80vw', maxHeight: '95vh' }}
@@ -62,7 +66,44 @@ import { TwitterTweetEmbed } from 'react-twitter-embed'
 
 ---
 
-# Move here
+# Before we dive deeper into the architecture...
+
+---
+
+# Demo
+
+```notes
+SCRIPT:
+npx gatsby new .
+```
+
+---
+
+# Getting Started
+
+<ul>
+  <li>$ npx gatsby new my-site</li>
+  <li>
+    <a href="https://codesandbox.io/s/">CodeSandbox</a>
+  </li>
+  <li>
+    <a href="https://github.com/gatsbyjs/gatsby-starter-hello-world">
+      Click the Netlify deploy button
+    </a>
+  </li>
+</ul>
+
+```notes
+3 ways of trying out Gatsby quickly:
+
+1 Click the deploy to netlify button - https://github.com/gatsbyjs/gatsby-starter-hello-world
+2 CodeSandbox
+3 npx - Bootstrap a new project using npx
+```
+
+---
+
+# MAP
 
 1. High level overview of features
 2. Architecture
@@ -77,20 +118,27 @@ import { TwitterTweetEmbed } from 'react-twitter-embed'
 
 ---
 
-# Getting Started
+# Data Sources
 
-<ul>
-  <li>$ npx gatsby new my-site</li>
-  <li>
-    <a href="https://codesandbox.io/s/">CodeSandbox</a>
-  </li>
-</ul>
+Any data source
+Build pages from Google sheets or Trello cards wut?
 
-```notes
-- Bootstrap a new project using npx
+---
 
-- Try it in CodeSandbox
-```
+# Build and tooling
+
+- Webpack
+- Babel
+  All the good stuff
+
+---
+
+# Deploying
+
+- Netlify
+- GitHub Pages
+- Now.sh
+- AWS S3
 
 ---
 
@@ -103,6 +151,17 @@ Chunks of reusable functionality, shared with the community.
 ```notes
 Things like Google Analytics, for example. No need to reinvent the wheel. Use the highly optimized and supported plugin.
 ```
+
+---
+
+# Source plugins
+
+You can use what's shared by the community
+You can roll your own and keep it private if that's really needed
+
+---
+
+# Transformer plugins
 
 ---
 
@@ -259,12 +318,6 @@ Some demo here
 - store.gatsbyjs.org
 
 - TODO: add lighthouse images per each
-
-<img
-  style={{ marginTop: 'var(--m-t-3)' }}
-  src={require('file-loader!../assets/lighthouse.jpg')}
-  alt="Google Lighthouse Score"
-/>
 
 ---
 
