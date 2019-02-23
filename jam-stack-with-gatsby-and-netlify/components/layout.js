@@ -31,9 +31,9 @@ export default ({ children }) => (
     <Footer className="custom-layout__footer">
       <FooterLink
         className="footer__follow-along"
-        href="https://jam-stack-with-gatsby-and-netlify.netlify.com"
+        href="https://gyanev.com/jamstack"
       >
-        https://jam-stack-with-gatsby-and-netlify.netlify.com
+        https://gyanev.com/jamstack
       </FooterLink>
       <FooterLink
         className="footer__twitter"

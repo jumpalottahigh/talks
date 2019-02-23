@@ -16,6 +16,7 @@ import { TwitterTweetEmbed } from 'react-twitter-embed'
     <li>Deployable anywhere</li>
     <li>Progressive Web App (PWA)</li>
     <li>Dev Experience</li>
+    <li>Build tooling</li>
     <li>Rich ecosystem</li>
     <li>Amazing community 💜</li>
   </Appear>
@@ -44,6 +45,12 @@ import { TwitterTweetEmbed } from 'react-twitter-embed'
 
 # One of the easiest ways to try out React and/or GraphQL with no prior experience
 
+```notes
+- If you are a React veteran you will feel right at home
+- But even if you have never tried React, Gatsby is a great way to try it out.
+
+```
+
 ---
 
 <img
@@ -68,6 +75,10 @@ import { TwitterTweetEmbed } from 'react-twitter-embed'
 
 # Before we dive deeper into the architecture...
 
+```notes
+... let's look at how we can start quickly a Gatsby project.
+```
+
 ---
 
 # Demo
@@ -81,7 +92,7 @@ npx gatsby new .
 
 # Getting Started
 
-<ul>
+<ol>
   <li>$ npx gatsby new my-site</li>
   <li>
     <a href="https://codesandbox.io/s/">CodeSandbox</a>
@@ -91,7 +102,7 @@ npx gatsby new .
       Click the Netlify deploy button
     </a>
   </li>
-</ul>
+</ol>
 
 ```notes
 3 ways of trying out Gatsby quickly:
@@ -103,18 +114,17 @@ npx gatsby new .
 
 ---
 
-# MAP
-
-1. High level overview of features
-2. Architecture
-3. Performance and why performance is important
-4. Showcase and What can you build with Gatsby
-5. Getting started (npx, codesandbox)
-6. Starters
-7. Plugins and breakdown of types and roles
-8. Demo (graphiql, etc.)
-9. Learning
-10. Contribute
+<iframe
+  src="https://codesandbox.io/embed/k3201jy9jo?fontsize=14"
+  style={{
+    width: '90vw',
+    height: '90vh',
+    border: 0,
+    borderRadius: '4px',
+    overflow: 'hidden'
+  }}
+  sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+/>
 
 ---
 
@@ -122,14 +132,67 @@ npx gatsby new .
 
 Any data source
 Build pages from Google sheets or Trello cards wut?
+add images of JSON, YAML, MARKDOWN ICONS etc. for exmaple
 
 ---
 
-# Build and tooling
+# One of the easiest ways to try out GraphQL with no prior experience
 
-- Webpack
-- Babel
-  All the good stuff
+---
+
+# Demo
+
+```notes
+TODO: come up with concrete examples to query; set them up in the codesandbox
+```
+
+---
+
+<iframe
+  src="https://k3201jy9jo.sse.codesandbox.io/___graphql"
+  style={{
+    width: '90vw',
+    height: '90vh',
+    border: 0,
+    borderRadius: '4px',
+    overflow: 'hidden'
+  }}
+  sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+/>
+
+---
+
+# Plugins
+
+TODO: image of plugins page
+
+<ul>
+  <Appear>
+    <li>Reusable common functionality</li>
+    <li>Source plugins</li>
+    <li>Transformer plugins</li>
+    <li>Public vs Private</li>
+  </Appear>
+</ul>
+
+```notes
+- Chunks of reusable functionality, shared with the community.
+- Things like Google Analytics, for example. No need to reinvent the wheel. Use the highly optimized and supported plugin.
+- 2 special categories of plugins - Source and Transformer plugins
+- A thing to note about plugins is that you are not limited to only what's available out there. You can easily create your own custom private plugins specific to your project if you have a use case for that.
+```
+
+---
+
+# Source plugins TODO: CONTINUE HERE
+
+TODO: image or list of examples
+
+---
+
+# Transformer plugins
+
+TODO: image or list of examples
 
 ---
 
@@ -139,29 +202,6 @@ Build pages from Google sheets or Trello cards wut?
 - GitHub Pages
 - Now.sh
 - AWS S3
-
----
-
-# Plugins
-
-- Plugins break down, explaing types and roles
-
-Chunks of reusable functionality, shared with the community.
-
-```notes
-Things like Google Analytics, for example. No need to reinvent the wheel. Use the highly optimized and supported plugin.
-```
-
----
-
-# Source plugins
-
-You can use what's shared by the community
-You can roll your own and keep it private if that's really needed
-
----
-
-# Transformer plugins
 
 ---
 
@@ -360,3 +400,16 @@ Some demo here
 ```
 
 ---
+
+# MAP - TODO: remove when done
+
+1. High level overview of features
+2. Architecture
+3. Performance and why performance is important
+4. Showcase and What can you build with Gatsby
+5. Getting started (npx, codesandbox)
+6. Starters
+7. Plugins and breakdown of types and roles
+8. Demo (graphiql, etc.)
+9. Learning
+10. Contribute
