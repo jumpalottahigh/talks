@@ -30,7 +30,7 @@ h1 {
 
 .intro-grid .jam {
   grid-row: 1 / -1;
-  width: 17vw;
+  width: 12vw;
 }
 
 .intro-grid .gatsby,
@@ -46,4 +46,28 @@ ul {
 
 a {
   color: #07f;
+}
+
+ul.intro-self {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.intro-self li {
+  display: flex;
+  height: 2rem;
+  font-size: 2rem;
+  line-height: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+ul.intro-self img {
+  height: 2.5rem;
+}
+
+ul.intro-self img.f-secure {
+  margin-top: -0.5rem;
+  margin-left: 0.5rem;
 }
