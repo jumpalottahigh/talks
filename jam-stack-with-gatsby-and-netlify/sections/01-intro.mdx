@@ -46,6 +46,8 @@ export default CustomLayout
 
 ---
 
+export default CustomLayout
+
 # JAMstack with:<br/> Gatsby and Netlify
 
 <div className="intro-grid">
@@ -75,33 +77,80 @@ export default CustomLayout
 
 ---
 
-# I'm Georgi
+export default CustomLayout
 
-<Appear>
-  <ul className="intro-self">
+# I'm Georgi Yanev
+
+#### 💜 the Web, #perfmatters 🚀
+
+<ul className="intro-self">
+  <Appear>
     <li>
-      Web Developer @
-      <img
-        className="f-secure"
-        src="https://www.f-secure.com/documents/assets/images/logo-f-secure-black.svg"
-        alt="F-Secure"
-      />
+      <span className="accent m-x">Web Developer</span> @
+      <a href="https://www.f-secure.com/home">
+        <img
+          className="f-secure"
+          src="https://www.f-secure.com/documents/assets/images/logo-f-secure-black.svg"
+          alt="F-Secure"
+        />
+      </a>
     </li>
-    <li>@jumpalottahigh on Twitter and GitHub</li>
-    <li />
-  </ul>
-</Appear>
+    <li>
+      <span className="accent m-x">@jumpalottahigh</span> on
+      <a href="https://twitter.com/jumpalottahigh">
+        <img
+          src={require('file-loader!../assets/twitter.svg')}
+          className="twitter"
+          alt="Twitter"
+        />
+      </a>
+      and
+      <a href="https://github.com/jumpalottahigh">
+        <img
+          src={require('file-loader!../assets/github.svg')}
+          className="github"
+          alt="GitHub"
+        />
+      </a>
+    </li>
+    <li>
+      <img
+        src="https://blog.georgi-yanev.com/static/1936ea7727b408fdfad97f772452f62c/bc04a/logo.png"
+        className=""
+        alt="Georgi Yanev blog icon"
+      />
+      <span className="m-x"> at </span>
+      <a href="https://gyanev.com/blog">gyanev.com/blog</a>
+    </li>
+  </Appear>
+</ul>
 
 ```notes
-- I work as a Web Developer at F-Secure, across the bridge from here
+- Hi, my name is Georgi Yanev
+- I love building things on the web, and I think performance really matters.
 
+- I work as a Web Developer at F-Secure, across the bridge from here
+- You can find me as @jumpalottahigh on Twitter and GitHub, I tweet about web dev and performance mostly
+- I blog at gyanev.com/blog about FPV drone builds, projects or life lessons
 ```
 
 ---
 
-# I'm Georgi
+export default Split
 
-<video autoPlay={true} muted={true} playsInline="" className="fade-in">
+<video
+  autoPlay={true}
+  muted={true}
+  playsInline=""
+  className="fade-in"
+  style={{ maxWidth: '50vw' }}
+  onClick={e => {
+    e.target.pause()
+    e.target.currentTime = 0
+    e.target.load()
+    e.target.play()
+  }}
+>
   <source
     src="https://www.georgi-yanev.com/static/landing-a-quad-1-d1a878f7ef756c703ebeeecdb529e63e.webm"
     type="video/webm"
@@ -113,62 +162,82 @@ export default CustomLayout
   Tap to play video
 </video>
 
----
+### TODO: move some of the material from the next few slides to the end of the presentation
 
-- My name is Georgi, my twitter handle is @jumpalottahigh, and I also go under the same slug on GitHub and many other places
-- web developer @ F-Secure [TODO: add F-Secure logo, blog icons etc.]
-- contribute to open source
-- fly FPV drones
-- youtube channel?
+### 🚁 Flying FPV drones
 
-[Insert video of?]
-A few more subslides with some media
-Twitter, Github links
+### ✍ Writing a book
 
-```notes
-- We build campaign landing pages and product pages
-- I build and fly FPV drones
-```
+### 🔁 Contribute to OSS
+
+### 📡 Stream on Twitch
+
+### 🎥 Upload dev tips videos to YouTube
 
 ---
 
-<InstagramEmbed
-  url="https://instagr.am/p/BqUPyt7l1al/"
-  maxWidth={320}
-  hideCaption={false}
-  containerTagName="div"
+<img
+  src={require('file-loader!../assets/github-profile.png')}
+  alt="jumpalottahigh GitHub profile"
+  className="full-screen"
 />
 
 ---
 
-<InstagramEmbed
-  url="https://instagr.am/p/Bil9iRqhe-T/"
-  maxWidth={320}
-  hideCaption={false}
-  containerTagName="div"
-  style={{ display: 'inline-block' }}
+<img
+  src={require('file-loader!../assets/github-prs.png')}
+  alt="jumpalottahigh GitHub PRs"
+  className="full-screen"
 />
 
-<InstagramEmbed
-  url="https://instagr.am/p/Bh4r51VAM41/"
-  maxWidth={320}
-  hideCaption={false}
-  containerTagName="div"
-  style={{ display: 'inline-block' }}
+---
+
+<video
+  autoPlay={true}
+  muted={true}
+  playsInline=""
+  className="fade-in"
+  style={{ maxHeight: '90vw' }}
+  onClick={e => {
+    e.target.pause()
+    e.target.currentTime = 0
+    e.target.load()
+    e.target.play()
+  }}
+>
+  <source
+    src={require('file-loader!../assets/power-looping-all-day.webm')}
+    type="video/webm"
+  />
+  Tap to play video
+</video>
+
+<div className="box">Example text</div>
+
+---
+
+<img
+  src={require('file-loader!../assets/drone-1.jpg')}
+  alt="Drone build 1"
+  className="full-screen"
+/>
+
+---
+
+<img
+  src={require('file-loader!../assets/drone-2.jpg')}
+  alt="Drone build 2"
+  className="full-screen"
 />
 
 ---
 
 # Before we begin...
 
+TODO: figure out which questions would help me the most
+
 ```notes
 - Who has heard the term JAMstack
 - With a quick show of hands, who here has heard of Gatsby
 - Who has used it
 ```
-
----
-
-# AJAX and other similar terms
-
-It's not about the term but what it stands for

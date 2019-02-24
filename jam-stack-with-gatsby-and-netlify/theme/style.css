@@ -12,7 +12,8 @@ img.full-screen {
   max-height: calc(100vh - 40px);
 }
 
-h1 {
+h1,
+h4 {
   text-align: center;
 }
 
@@ -55,19 +56,43 @@ ul.intro-self {
 
 ul.intro-self li {
   display: flex;
-  height: 2rem;
+  height: 2.5rem;
   font-size: 2rem;
-  line-height: 2rem;
+  line-height: 2.5rem;
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
 }
 
 ul.intro-self img {
-  height: 2.5rem;
+  height: 3rem;
 }
 
 ul.intro-self img.f-secure {
   margin-top: -0.5rem;
   margin-left: 0.5rem;
+}
+
+ul.intro-self .twitter,
+ul.intro-self .github {
+  margin: 0 1rem;
+}
+
+.accent {
+  color: #07f;
+}
+
+.m-x {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.box {
+  position: relative;
+  top: -50%;
+  left: calc(50% - 25vw);
+  width: 50vw;
+  height: 20vh;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 9;
 }
