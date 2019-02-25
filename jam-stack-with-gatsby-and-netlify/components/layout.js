@@ -4,7 +4,6 @@ import styled from 'styled-components'
 const Layout = styled.div`
   width: 100vw;
   height: 100vw;
-  /* background-color: tomato; */
   display: flex;
   flex-direction: column;
   justify-content: center;
