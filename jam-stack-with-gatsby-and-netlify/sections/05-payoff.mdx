@@ -1,3 +1,5 @@
+import { Split } from 'mdx-deck/layouts'
+
 # Demo
 
 ```notes
@@ -46,3 +48,45 @@ If you walk away with one thing from here today, may it be:
 ```notes
 - Follow me on these platforms
 ```
+
+---
+
+export default Split
+
+<video
+  autoPlay={true}
+  muted={true}
+  playsInline=""
+  className="fade-in"
+  style={{ maxWidth: '50vw' }}
+  onClick={e => {
+    e.target.pause()
+    e.target.currentTime = 0
+    e.target.load()
+    e.target.play()
+  }}
+>
+  <source
+    src="https://www.georgi-yanev.com/power-looping-all-day.webm"
+    type="video/webm"
+  />
+  {/* <source
+    src="https://www.georgi-yanev.com/stuck-the-landing.webm"
+    type="video/webm"
+  /> */}
+  Tap to play video
+</video>
+
+### TODO: move some of the material from the next few slides to the end of the presentation
+
+### 🚁 Flying FPV drones
+
+### ✍ Writing a book
+
+### 🔁 Contribute to OSS
+
+### 📡 Stream on Twitch
+
+### 🎥 Upload dev tips videos to YouTube
+
+---

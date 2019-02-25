@@ -77,53 +77,71 @@ export default CustomLayout
 
 ---
 
-export default CustomLayout
+<video
+  autoPlay={true}
+  muted={true}
+  playsInline=""
+  className="fade-in"
+  style={{ height: '100vh', position: 'relative' }}
+  onClick={e => {
+    e.target.pause()
+    e.target.currentTime = 0
+    e.target.load()
+    e.target.play()
+  }}
+>
+  <source
+    src="https://www.georgi-yanev.com/stuck-the-landing.webm"
+    type="video/webm"
+  />
+  Tap to play video
+</video>
 
-# I'm Georgi Yanev
-
-#### 💜 the Web, #perfmatters 🚀
-
-<ul className="intro-self">
-  <Appear>
-    <li>
-      <span className="accent m-x">Web Developer</span> @
-      <a href="https://www.f-secure.com/home">
+<div className="box">
+  <h1>I'm Georgi Yanev</h1>
+  <h4>💜 the Web, #perfmatters 🚀</h4>
+  <ul className="intro-self">
+    <Appear>
+      <li>
+        <span className="accent m-x">Web Developer</span> @
+        <a href="https://www.f-secure.com/home">
+          <img
+            className="f-secure"
+            src="https://www.f-secure.com/documents/assets/images/logo-f-secure-black.svg"
+            alt="F-Secure"
+          />
+        </a>
+      </li>
+      <li>
+        <span className="accent m-x">@jumpalottahigh</span> on
+        <a href="https://twitter.com/jumpalottahigh">
+          <img
+            src={require('file-loader!../assets/twitter.svg')}
+            className="twitter"
+            alt="Twitter"
+          />
+        </a>
+        and
+        <a href="https://github.com/jumpalottahigh">
+          <img
+            src={require('file-loader!../assets/github.svg')}
+            className="github"
+            alt="GitHub"
+          />
+        </a>
+      </li>
+      <li>
         <img
-          className="f-secure"
-          src="https://www.f-secure.com/documents/assets/images/logo-f-secure-black.svg"
-          alt="F-Secure"
+          src="https://blog.georgi-yanev.com/static/1936ea7727b408fdfad97f772452f62c/bc04a/logo.png"
+          className=""
+          alt="Georgi Yanev blog icon"
         />
-      </a>
-    </li>
-    <li>
-      <span className="accent m-x">@jumpalottahigh</span> on
-      <a href="https://twitter.com/jumpalottahigh">
-        <img
-          src={require('file-loader!../assets/twitter.svg')}
-          className="twitter"
-          alt="Twitter"
-        />
-      </a>
-      and
-      <a href="https://github.com/jumpalottahigh">
-        <img
-          src={require('file-loader!../assets/github.svg')}
-          className="github"
-          alt="GitHub"
-        />
-      </a>
-    </li>
-    <li>
-      <img
-        src="https://blog.georgi-yanev.com/static/1936ea7727b408fdfad97f772452f62c/bc04a/logo.png"
-        className=""
-        alt="Georgi Yanev blog icon"
-      />
-      <span className="m-x"> at </span>
-      <a href="https://gyanev.com/blog">gyanev.com/blog</a>
-    </li>
-  </Appear>
-</ul>
+        <span className="m-x"> at </span>
+        <a href="https://gyanev.com/blog">gyanev.com/blog</a>
+      </li>
+    </Appear>
+  </ul>
+</div>
 
 ```notes
 - Hi, my name is Georgi Yanev
@@ -136,99 +154,46 @@ export default CustomLayout
 
 ---
 
-export default Split
+export default Invert
 
-<video
-  autoPlay={true}
-  muted={true}
-  playsInline=""
-  className="fade-in"
-  style={{ maxWidth: '50vw' }}
-  onClick={e => {
-    e.target.pause()
-    e.target.currentTime = 0
-    e.target.load()
-    e.target.play()
-  }}
->
-  {/* <source
-    src="https://www.georgi-yanev.com/static/landing-a-quad-1-d1a878f7ef756c703ebeeecdb529e63e.webm"
-    type="video/webm"
-  /> */}
-  <source
-    src={require('file-loader!../assets/stuck-the-landing.webm')}
-    type="video/webm"
+<div className="split-images">
+  <img
+    src={require('file-loader!../assets/github-profile.png')}
+    alt="jumpalottahigh GitHub profile"
+    onLoad={e => {
+      e.target.style.transform = `rotate(${
+        Math.random() > 0.5 ? Math.random() * 20 : Math.random() * -20
+      }deg)`
+    }}
   />
-  Tap to play video
-</video>
-
-### TODO: move some of the material from the next few slides to the end of the presentation
-
-### 🚁 Flying FPV drones
-
-### ✍ Writing a book
-
-### 🔁 Contribute to OSS
-
-### 📡 Stream on Twitch
-
-### 🎥 Upload dev tips videos to YouTube
-
----
-
-<img
-  src={require('file-loader!../assets/github-profile.png')}
-  alt="jumpalottahigh GitHub profile"
-  className="full-screen"
-/>
-
----
-
-<img
-  src={require('file-loader!../assets/github-prs.png')}
-  alt="jumpalottahigh GitHub PRs"
-  className="full-screen"
-/>
-
----
-
-<video
-  autoPlay={true}
-  muted={true}
-  playsInline=""
-  className="fade-in"
-  style={{ maxHeight: '90vw' }}
-  onClick={e => {
-    e.target.pause()
-    e.target.currentTime = 0
-    e.target.load()
-    e.target.play()
-  }}
->
-  <source
-    src={require('file-loader!../assets/power-looping-all-day.webm')}
-    type="video/webm"
+  <img
+    src={require('file-loader!../assets/drone-1.jpg')}
+    alt="Drone build 1"
+    onLoad={e => {
+      e.target.style.transform = `rotate(${
+        Math.random() > 0.5 ? Math.random() * 20 : Math.random() * -20
+      }deg)`
+    }}
   />
-  Tap to play video
-</video>
-
-<div className="box">Example text</div>
-
----
-
-<img
-  src={require('file-loader!../assets/drone-1.jpg')}
-  alt="Drone build 1"
-  className="full-screen"
-/>
-
----
-
-<img
-  src={require('file-loader!../assets/drone-2.jpg')}
-  alt="Drone build 2"
-  className="full-screen"
-/>
+  <img
+    src={require('file-loader!../assets/drone-2.jpg')}
+    alt="Drone build 2"
+    onLoad={e => {
+      e.target.style.transform = `rotate(${
+        Math.random() > 0.5 ? Math.random() * 20 : Math.random() * -20
+      }deg)`
+    }}
+  />
+  <img
+    src={require('file-loader!../assets/github-prs.png')}
+    alt="jumpalottahigh GitHub PRs"
+    onLoad={e => {
+      e.target.style.transform = `rotate(${
+        Math.random() > 0.5 ? Math.random() * 20 : Math.random() * -20
+      }deg)`
+    }}
+  />
+</div>
 
 ---
 

@@ -11,50 +11,9 @@ https://www.chromestatus.com/feature/5641405942726656
 
 ---
 
-# TODO: Remove when done - Testing different layouts
-
----
-
-<Image
-  src={require('file-loader!../assets/jamstack-examples.png')}
-  alt="JAMstack"
-/>
-
----
-
-export default CustomLayout
-
-# CustomLayout
-
----
-
 export default Invert
 
 # Inverted Slide
-
----
-
-export default Split
-
-<img
-  style={{ maxWidth: '100%' }}
-  src={require('file-loader!../assets/helsinki-js.png')}
-  alt="JAMstack"
-/>
-
-## Split Slide
-
----
-
-export default SplitRight
-
-<img
-  style={{ maxWidth: '100%' }}
-  src={require('file-loader!../assets/helsinki-js.png')}
-  alt="JAMstack"
-/>
-
-## Split Slide
 
 ---
 
@@ -64,40 +23,61 @@ export default FullScreenCode
 <Button>Beep</Button>
 ```
 
----
+export default CustomLayout
 
-# Hi,
+# I'm Georgi Yanev
 
-<span>
-  <img
-    style={{ width: '650px' }}
-    src={require('file-loader!../assets/helsinki-js.png')}
-    alt="JAMstack"
-  />
-</span>
+#### 💜 the Web, #perfmatters 🚀
 
----
-
-export default Split
-
-<div>
-  <img src={require('file-loader!../assets/jam.png')} alt="JAMstack" />
-</div>
-
-<div>
-  <img src={require('file-loader!../assets/gatsby.svg')} alt="Gatsby" />
-  <img src={require('file-loader!../assets/netlify.svg')} alt="Netlify" />
-</div>
-
----
-
-Follow along at:
-
-https://jam-stack-with-gatsby-and-netlify.netlify.com
-TODO: after this slide put the link to the bottom left or center and maybe twitter handle at bottom right
+<ul className="intro-self">
+  <Appear>
+    <li>
+      <span className="accent m-x">Web Developer</span> @
+      <a href="https://www.f-secure.com/home">
+        <img
+          className="f-secure"
+          src="https://www.f-secure.com/documents/assets/images/logo-f-secure-black.svg"
+          alt="F-Secure"
+        />
+      </a>
+    </li>
+    <li>
+      <span className="accent m-x">@jumpalottahigh</span> on
+      <a href="https://twitter.com/jumpalottahigh">
+        <img
+          src={require('file-loader!../assets/twitter.svg')}
+          className="twitter"
+          alt="Twitter"
+        />
+      </a>
+      and
+      <a href="https://github.com/jumpalottahigh">
+        <img
+          src={require('file-loader!../assets/github.svg')}
+          className="github"
+          alt="GitHub"
+        />
+      </a>
+    </li>
+    <li>
+      <img
+        src="https://blog.georgi-yanev.com/static/1936ea7727b408fdfad97f772452f62c/bc04a/logo.png"
+        className=""
+        alt="Georgi Yanev blog icon"
+      />
+      <span className="m-x"> at </span>
+      <a href="https://gyanev.com/blog">gyanev.com/blog</a>
+    </li>
+  </Appear>
+</ul>
 
 ```notes
-- The slides are created with mdx-deck and you can follow along at that URL
+- Hi, my name is Georgi Yanev
+- I love building things on the web, and I think performance really matters.
+
+- I work as a Web Developer at F-Secure, across the bridge from here
+- You can find me as @jumpalottahigh on Twitter and GitHub, I tweet about web dev and performance mostly
+- I blog at gyanev.com/blog about FPV drone builds, projects or life lessons
 ```
 
 ---

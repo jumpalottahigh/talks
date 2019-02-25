@@ -89,10 +89,24 @@ ul.intro-self .github {
 
 .box {
   position: relative;
-  top: -50%;
-  left: calc(50% - 25vw);
-  width: 50vw;
-  height: 20vh;
-  background: rgba(0, 0, 0, 0.75);
+  top: calc(-50% + 275px);
+  left: calc(50% - 350px);
+  width: 700px;
+  height: 550px;
+  padding-top: 5px;
+  margin-top: -500px;
+  background: rgba(255, 255, 255, 0.66);
   z-index: 9;
+}
+
+.split-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.split-images img {
+  max-height: 45vh;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px 3px #4d5054;
 }

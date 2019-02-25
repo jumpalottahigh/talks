@@ -1,6 +1,6 @@
 import { TwitterTweetEmbed } from 'react-twitter-embed'
 import { Appear } from 'mdx-deck'
-import { Split } from 'mdx-deck/layouts'
+import { Split, Invert } from 'mdx-deck/layouts'
 
 # What is JAMstack?
 
@@ -32,9 +32,7 @@ I personally take the JAMstack in a similar way. Some strict definitions are not
 
 # const { J } = JAM
 
-_"Any dynamic programming during the request/response cycle is handled by **JavaScript, running entirely on the client**. This could be **any** frontend framework, library, or even vanilla JavaScript."_
-
-- TODO: highlight the items in another color to be visible on projector
+_"Any dynamic programming during the request/response cycle is handled by **<span className="accent">JavaScript, running entirely on the client</span>**. This could be **<span className="accent">any</span>** frontend framework, library, or even vanilla JavaScript."_
 
 ```notes
 - This is where we will focus today
@@ -45,7 +43,7 @@ _"Any dynamic programming during the request/response cycle is handled by **Java
 
 # const { A } = JAM
 
-_"All server-side processes or database actions are **abstracted into reusable APIs**, accessed over HTTPS with JavaScript. These can be custom-built or leverage third-party services."_
+_"All server-side processes or database actions are **<span className="accent">abstracted into reusable APIs</span>**, accessed over HTTPS with JavaScript. These can be custom-built or leverage third-party services."_
 
 ```notes
 - Nothing new, leverage the power of APIs
@@ -56,7 +54,7 @@ _"All server-side processes or database actions are **abstracted into reusable A
 
 # const { M } = JAM
 
-_"Templated markup should be **prebuilt at deploy time**, usually using a **site generator** for content sites, or a **build tool** for web apps."_
+_"Templated markup should be **<span className="accent">prebuilt at deploy time</span>**, usually using a **<span className="accent">site generator</span>** for content sites, or a **<span className="accent">build tool</span>** for web apps."_
 
 ```notes
 - Also nothing too special, just prebuilt, usually generated markup
@@ -82,12 +80,14 @@ _"Templated markup should be **prebuilt at deploy time**, usually using a **site
 
 ---
 
+export default Invert
+
 # Core ideas
 
-- Better Performance
-- Higher Security
-- Cheaper, Easier Scaling
-- Better Developer Experience
+- 📈 Better Performance
+- 🔐 Higher Security
+- 💵 Cheaper, Easier Scaling
+- 😍 Better Developer Experience
 
 ```notes
 - This is the more interesting part.
@@ -96,6 +96,7 @@ _"Templated markup should be **prebuilt at deploy time**, usually using a **site
 - (HS) Less server side processes = less attack surface
 - (CES) Scaling is easy and efficient for static files
 - (BDE) Less things to maintain and faster time to deploy
+- Netlify's NPS is 96. This is bonkers and probably the reason devs fall in love with it
 ```
 
 ---
@@ -113,7 +114,7 @@ _"Templated markup should be **prebuilt at deploy time**, usually using a **site
 
 ---
 
-# Trade-offs
+# Consider the Trade-offs
 
 - Engineering is all about making the right trade offs based on your requirements
 - Choose the right approach for your project
