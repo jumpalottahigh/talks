@@ -25,6 +25,7 @@ I personally take the JAMstack in a similar way. Some strict definitions are not
 
 ```notes
 - The abbreviation stems from these terms
+
 - Expand on each item
 ```
 
@@ -36,6 +37,7 @@ _"Any dynamic programming during the request/response cycle is handled by **<spa
 
 ```notes
 - This is where we will focus today
+
 - The critical parts here being: RUNNING ON CLIENT and ANY
 ```
 
@@ -47,6 +49,7 @@ _"All server-side processes or database actions are **<span className="accent">a
 
 ```notes
 - Nothing new, leverage the power of APIs
+
 - Headless CMSs such as Contentful, realtime DB like Firebase, Google Maps API, you name it
 ```
 
@@ -74,7 +77,9 @@ _"Templated markup should be **<span className="accent">prebuilt at deploy time<
 
 ```notes
 - Check the examples section at jamstack.org
+
 - Any framework / library
+
 - Headless CMS's and APIs
 ```
 
@@ -91,11 +96,17 @@ export default Invert
 
 ```notes
 - This is the more interesting part.
+
 - The ultimate goal of the approach.
+
 - (BP) Prebuilt HTML from the CDN edge = fast!
+
 - (HS) Less server side processes = less attack surface
+
 - (CES) Scaling is easy and efficient for static files
+
 - (BDE) Less things to maintain and faster time to deploy
+
 - Netlify's NPS is 96. This is bonkers and probably the reason devs fall in love with it
 ```
 
@@ -104,12 +115,14 @@ export default Invert
 # What JAMstack is NOT?
 
 - Not a silver bullet
-- Not about specific technologies (use your flavor)
+- Not about specific framework or library (bring your own)
 
 ```notes
+- A sort of disclaimer
+
 - All of that being said, ...
+
 - It's not the answer to all problems; Just a particular approach
-- Ultimately engineering is all about making the right trade-offs based on your use case
 ```
 
 ---
@@ -120,10 +133,14 @@ export default Invert
 - Choose the right approach for your project
 
 ```notes
+- Lastly,
+
 - Ultimately engineering is all about making the right trade-offs based on your use case
 ```
 
 ---
+
+### If you want to learn more...
 
 <TwitterTweetEmbed
   tweetId="1093223382223605762"
@@ -132,9 +149,10 @@ export default Invert
 />
 
 ```notes
-- A couple of resouces from the last few weeks worth checking out are:
 
-- Article by Addy Osmani and Jason Miller from the Google Chrome team comparing SSR, CSR and hybrid approaches
+- If you'd like to learn more, there's this great article by Addy Osmani and Jason Miller from the Google Chrome team, that focuses on describing different rendering approaches.
+
+- Article comparing SSR, CSR and hybrid approaches
 ```
 
 ---
@@ -146,6 +164,12 @@ export default Invert
   style={{ maxHeight: '90vh' }}
 />
 
+```notes
+- In particular this infographic where they compare some PROs and CONs of different rendering approaches is quite interesting.
+
+- We don't have too much time to go too much in depth during this talk, but feel free to research the topic further if interested.
+```
+
 ---
 
 <iframe
@@ -155,9 +179,14 @@ export default Invert
   frameBorder="0"
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
-  style={{ display: 'block', margin: '0 auto' }}
+  style={{
+    display: 'block',
+    margin: '0 auto',
+    minWidth: '1180px',
+    minHeight: '720px'
+  }}
 />
 
 ```notes
-- Video by Surma and Jake from Google Chrome team
+- Or just watch this witty video by Surma and Jake also from the Google Chrome team.
 ```

@@ -1,4 +1,5 @@
 import { Appear } from 'mdx-deck'
+import { Invert, Split, SplitRight, FullScreenCode } from 'mdx-deck/layouts'
 import { TwitterTweetEmbed } from 'react-twitter-embed'
 import DataSources from '../components/DataSources'
 
@@ -17,13 +18,15 @@ import DataSources from '../components/DataSources'
     <li>Deployable anywhere</li>
     <li>Progressive Web App (PWA)</li>
     <li>Dev Experience</li>
-    <li>Build tooling</li>
     <li>Rich ecosystem</li>
     <li>Amazing community 💜</li>
   </Appear>
 </ul>
 
 ```notes
+
+- Many times introduced as "static site generator", but it goes well beyond that and is so much more.
+
 - Gatsby is engineered for performance from the ground up. Starts off with a Lighthouse score of 100 across the board.
 
 - Webpack, Babel, Prettier, ESLint, whatever you may be used to in a modern project
@@ -44,20 +47,94 @@ import DataSources from '../components/DataSources'
 
 ---
 
-# All React modules
+<TwitterTweetEmbed tweetId="1083999310168162304" />
+
+#### Someone might have claimed that Gatsby would pull off Lighthouse score of 70+ running on a toaster at CDN edge
 
 ```notes
-- Because Gatsby just uses React under the hood, that means that you can use ANY react module from NPM in your projects. Pretty neat!
+- Hot takes: can get a score of 70+ on a toaster at CDN Edge
+
+- if someone is looking for a side project :D
 ```
 
 ---
 
+# TODO: But seriously, how fast is Gatsby?
+
+- TODO: put image of default starter lightouse score (and maybe a few other examples of real sites?)
+- follows PRPL pattern
+- Engineered for performance from the get-to
+- In legacy codebases we all know how hard it could be to work for performance - tech debt, a feature here, an improvement there
+
+```notes
+
+```
+
+---
+
+# Why performance matters
+
+- TODO: refine those points
+- Performance = Money
+- Users are impatient
+- KPIs - bounce rates, real disappointments, real money
+- bandwidth is expensive
+- the next 1 billion user on the internet
+
+---
+
+export default Split
+
+<div>
+  <img
+    style={{ height: '80vh' }}
+    src={require('file-loader!../assets/webp-support.png')}
+    alt="WebP image format support across browsers"
+  />
+  <h4>WebP image support</h4>
+</div>
+
+## How does Gatsby help?
+
+- <span className="accent">gatsby-image</span> is a highly optimized lazy loading image component
+- can serve WebP to browsers that support it
+- WebP could be up to half the size
+- with or without alpha channel
+
+```notes
+- Doing images right is important. Images are 50-70% of page size in many cases
+- WebP has more and more support
+```
+
+---
+
+<img
+  style={{ maxHeight: '175px' }}
+  src={require('file-loader!../assets/react.svg')}
+  alt="React"
+/>
+
 # One of the easiest ways to <span className="accent">try out React and/or GraphQL</span> with no prior experience
+
+<img
+  style={{ maxHeight: '175px' }}
+  src={require('file-loader!../assets/graphql.svg')}
+  alt="GraphQL"
+/>
 
 ```notes
 - If you are a React veteran you will feel right at home
+
 - But even if you have never tried React, Gatsby is a great way to try it out.
 
+```
+
+---
+
+# All React modules
+
+```notes
+- Because Gatsby just uses React under the hood, that means that you can use ANY react module from NPM in your projects. Pretty neat!
 ```
 
 ---
@@ -85,40 +162,53 @@ import DataSources from '../components/DataSources'
 # Before we dive deeper into the architecture...
 
 ```notes
-... let's look at how we can start quickly a Gatsby project.
+... let's look at how we can start a Gatsby project.
 ```
 
 ---
 
-# Demo
-
-```notes
-SCRIPT:
-npx gatsby new .
-```
-
----
-
-# Getting Started
-
-<ol>
-  <li>$ npx gatsby new my-site</li>
-  <li>
-    <a href="https://codesandbox.io/s/">CodeSandbox</a>
-  </li>
-  <li>
-    <a href="https://github.com/gatsbyjs/gatsby-starter-hello-world">
-      Click the Netlify deploy button
-    </a>
-  </li>
-</ol>
+# 3 easy ways to get started
 
 ```notes
 3 ways of trying out Gatsby quickly:
+```
 
-1 Click the deploy to netlify button - https://github.com/gatsbyjs/gatsby-starter-hello-world
-2 CodeSandbox
-3 npx - Bootstrap a new project using npx
+---
+
+### CLI
+
+<img
+  src={require('file-loader!../assets/gatsby-via-cli.png')}
+  style={{ maxWidth: '80vw', maxHeight: '95vh' }}
+  alt="Gatsby via CLI"
+/>
+
+---
+
+### CodeSandbox.io
+
+<img
+  src={require('file-loader!../assets/gatsby-via-codesandbox.png')}
+  style={{ maxWidth: '80vw', maxHeight: '95vh' }}
+  alt="Gatsby via CodeSandbox"
+/>
+
+---
+
+### Look for the green Netlify deploy button
+
+<img
+  src={require('file-loader!../assets/gatsby-via-button.png')}
+  style={{ height: '200px' }}
+  alt="Gatsby via deploy button"
+/>
+
+### Or pass a starter repository to Netlify via:
+
+https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default
+
+```notes
+
 ```
 
 ---
@@ -135,18 +225,49 @@ npx gatsby new .
   sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
 />
 
+```notes
+- For exmaple, here's how the default starter project looks like in CodeSandbox
+
+- You could get quite far already from here:
+
+  - work on project
+
+  - create a GitHub repo from here
+
+  - deploy
+```
+
+---
+
+<img
+  src={require('file-loader!../assets/gatsby-architecture.png')}
+  style={{ maxWidth: '80vw', maxHeight: '95vh' }}
+  alt="Gatsby architecture"
+/>
+
+```notes
+- Cool, so going back to our diagram here, let's now have a look at the different data sources that Gatsby can source
+```
+
 ---
 
 <DataSources />
 
 ```notes
-Any data source
-Build pages from Google sheets or Trello cards wut?
+- Any data source; There's quite a few of them
+
+- Build pages from Google sheets or Trello cards wut?
+
+- Some worthy mentions that are less gimicky: popular headless CMSs like: Contentful, Sanity, GraphCMS and more...
 ```
 
 ---
 
 # One of the easiest ways to <span className="accent">try out GraphQL</span> with no prior experience
+
+```notes
+- Gatsby sources all that data and exposes GraphQL types to you to query against
+```
 
 ---
 
@@ -157,6 +278,8 @@ TODO: come up with concrete examples to query; set them up in the codesandbox
 ```
 
 ---
+
+export default Invert
 
 <iframe
   src="https://k3201jy9jo.sse.codesandbox.io/___graphql"
@@ -174,39 +297,62 @@ TODO: come up with concrete examples to query; set them up in the codesandbox
 
 # Plugins
 
-TODO: image of plugins page
+<img
+  src={require('file-loader!../assets/gatsby-plugins-page.png')}
+  style={{ maxWidth: '90vw', maxHeight: '95vh' }}
+  alt="Gatsby plugins page"
+/>
+
+---
+
+# Plugins
 
 <ul>
-  <Appear>
-    <li>Reusable common functionality</li>
-    <li>Source plugins</li>
-    <li>Transformer plugins</li>
-    <li>Public vs Private</li>
-  </Appear>
+  <li>Reusable common functionality</li>
+  <li>Source plugins</li>
+  <li>Transformer plugins</li>
+  <li>Public vs Private</li>
 </ul>
 
 ```notes
+- ~ 700 plugins
+
 - Chunks of reusable functionality, shared with the community.
+
 - Things like Google Analytics, for example. No need to reinvent the wheel. Use the highly optimized and supported plugin.
+
 - 2 special categories of plugins - Source and Transformer plugins
+
+- Source that fetch data at build time
+
+- Transformers that process data, for example a JSON file
+
 - A thing to note about plugins is that you are not limited to only what's available out there. You can easily create your own custom private plugins specific to your project if you have a use case for that.
 ```
 
 ---
 
-# Source plugins TODO: CONTINUE HERE
+# Starters
 
-TODO: image or list of examples
+<img
+  src={require('file-loader!../assets/gatsby-starters-page.png')}
+  style={{ maxWidth: '90vw', maxHeight: '95vh' }}
+  alt="Gatsby starters page"
+/>
+
+```notes
+- Finally if you really can't be bothered to setup something from scratch, there are plenty of pre-configured starters for particular use cases
+
+- For example: by data provider, styling solution, SEO requirements and more.
+
+- The one major downside is that once you setup a project using a starter you are on your own and don't get anymore updates
+
+- The Gatsby team is working on this and THEMES are coming probably this year to allow for dependancy based starter usage
+```
 
 ---
 
-# Transformer plugins
-
-TODO: image or list of examples
-
----
-
-# Deploying
+# Deploy
 
 - Netlify
 - GitHub Pages
@@ -215,144 +361,35 @@ TODO: image or list of examples
 
 ---
 
-# Starters and themes
-
-- TODO: explain about starters
-- TODO: mention about themes
-
----
-
 # Showcase
 
----
-
-# Let's dive a bit deeper
-
-- React
-- GraphQL
-- graphiql
-- data sources...
-
----
-
-# Detail of how it works
-
-- React, GraphQL
-- Data
-- Freedome
-- bring the tools as you need them, don't get locked to stacks and technologies if you dont want to
-- easily swap out a headless CMS for another one
-
----
-
-# CodeSandbox embed for some reason
-
----
-
-# What does Gatsby give you?
-
-<Appear>- PWA</Appear>
-<Appear>- Performance</Appear>
-<Appear>- SEO</Appear>
-<Appear>- Tooling</Appear>
-<Appear>- Image processing</Appear>
-
-```notes
-- TODO: Make a very detailed slide or a few slides here; Images
-```
-
----
-
-<TwitterTweetEmbed tweetId="1083999310168162304" />
-
-Somone might have said could be ran on a toaster
-
-```notes
-- Hot takes: can get a score of 70+ on a toaster at CDN Edge
-- if someone is looking for a side project :D
-```
-
----
-
-# Additionally
-
-Show graphiql,
-Images with initial low quality base64 inlined version, and blur up or traced svg effects on loading
-
----
-
-# But also...
-
-It's a perfect chance of trying out React and GraphQL.
-
-Gatsby gives you <strong>tooling</strong> (Webpack, TODO:...)
-
-### <strong>A hassle free way to try React and GraphQL</strong>
-
-```notes
-- Add webpack and what not images
-```
-
----
-
-# Why Gatsby?
-
-Community!
-Plugins
-Starters
-
----
-
-# Why Gatsby?
-
-- Engineered for performance from the get-to
-- TODO: put image of default starter lightouse score (and maybe a few other examples of real sites?)
-- In legacy codebases we all know how hard it could be to work for performance - tech debt, a feature here, an improvement there
-
-```notes
-- Sample notes
-```
-
----
-
-# images
-
-WebP:
-
-- half the size
-- with or without alpha channel
-- supported by Chrome (which could be in many cases half your users or more; check your analytics)
-- supported in Edge (since Oct 2018) and support continues as Edge changes engine to Chromium
-- supported in Firefox
-
 <img
-  style={{ marginTop: 'var(--m-t-3)' }}
-  src={require('file-loader!../assets/webp-support.png')}
-  alt="WebP image format support across browsers"
+  src={require('file-loader!../assets/gatsby-showcase-main.png')}
+  style={{ maxWidth: '90vw', maxHeight: '95vh' }}
+  alt="Gatsby showcase"
 />
 
----
+```notes
+- TODO: move this slide to the beginning of the Gatsby stuff to increase interest?
 
-# Why performance matters
+- If you are looking for inspiration
 
-- users are impatient
-- KPIs - bounce rates, real disappointments, real money
-- bandwidth is expensive
-- the next 1 billion user on the internet
-
----
-
-# Interactive demo
-
-Some demo here
+- Submit your own projects to the showcase if you like
+```
 
 ---
 
-# What can you build with Gatsby?
+# TODO: What can you build with Gatsby?
 
 - Landing pages
 - Ecommerce
 - PWAs
+
+Examples
+
+- elementsofai
+- store.gatsbyjs.org
+- TODO: add lighthouse images per each
 
 ```notes
 - notes here
@@ -360,14 +397,11 @@ Some demo here
 
 ---
 
-# A few showcase slides with images
+# My projects and learnings
 
-3rd party projects: Find some advanced examples out there. or some simple and slick ones. show SHOWCASE site
-
-- elementsofai
-- store.gatsbyjs.org
-
-- TODO: add lighthouse images per each
+- TODO: write information
+- bring the tools as you need them, don't get locked to stacks and technologies if you dont want to
+- easily swap out a headless CMS for another one
 
 ---
 
@@ -383,7 +417,17 @@ Some demo here
 
 ---
 
-# Learning resources
+# Demo
+
+TODO: Build a site that generates 1000 pages and images in 3 minutes or less
+
+```notes
+- Maybe default starter + yaml into a demo of campaign catalog type of thing?
+```
+
+---
+
+# TODO: If you want to learn more
 
 - Docs
 - Tutorial
@@ -398,37 +442,17 @@ Some demo here
 
 ---
 
-# Contribute to Gatsby
+export default Split
 
-- Easy to get started
-- Get swag
+<img src={require('file-loader!../assets/gatsby-swag.png')} alt="Gatsby swag" />
 
-```notes
-- Speaking of which, if you are looking into contributing to open source, consider starting with Gatsby.
+# Contribute
 
-- People are very helpful! And you can even have a pair programming session with a member of the Ink team.
-```
+<div style={{margin: '0 2rem'}}>
 
----
+Consider contributing and get awesome swag.
 
-# MAP - TODO: remove when done
+Great way to learn.
+The community is super helpful!
 
-1. High level overview of features
-2. Architecture
-3. Performance and why performance is important
-4. Showcase and What can you build with Gatsby
-5. Getting started (npx, codesandbox)
-6. Starters
-7. Plugins and breakdown of types and roles
-8. Demo (graphiql, etc.)
-9. Learning
-10. Contribute
-
----
-
-# Gatsby enables you to ship things faster
-
-```notes
-- Why understanding everything under the hood would allow you to achieve some highly customized setups, it's not required
-and it's great to have such a solid framework to base your work off of.
-```
+</div>

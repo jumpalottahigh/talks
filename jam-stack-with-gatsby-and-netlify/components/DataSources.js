@@ -5,33 +5,20 @@ const DataWrapper = styled.div`
   height: 100%;
   width: 100%;
 
+  .img-grid {
+    height: 80%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
   img {
-    position: relative;
-    max-height: 35px;
+    max-height: 50px;
+    margin: 1.75rem;
   }
 `
-
-const blackList = []
-const offset = 1
-
-const randomUpTo = (max, chance) => {
-  let value = parseInt(Math.random() * max)
-
-  if (
-    !blackList.includes(value) &&
-    !blackList.includes(value + offset) &&
-    !blackList.includes(value - offset)
-  ) {
-    if (Math.random() > chance) {
-      value = value * -1
-    }
-  }
-
-  blackList.push(value)
-
-  console.log(value)
-  return value
-}
 
 const DataSources = () => {
   const dataProviders = [
@@ -61,16 +48,11 @@ const DataSources = () => {
   return (
     <DataWrapper>
       <h1>Data Sources</h1>
-      {dataProviders.map(dp => (
-        <img
-          key={dp}
-          style={{
-            left: `${randomUpTo(500, 0.5)}px`,
-            top: `${randomUpTo(250, 0.01)}px`
-          }}
-          src={require(`file-loader!../assets/${dp}`)}
-        />
-      ))}
+      <div className="img-grid">
+        {dataProviders.map(dp => (
+          <img key={dp} src={require(`file-loader!../assets/${dp}`)} />
+        ))}
+      </div>
     </DataWrapper>
   )
 }
