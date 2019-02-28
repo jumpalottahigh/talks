@@ -32,12 +32,12 @@ h4 {
 
 .intro-grid .jam {
   grid-row: 1 / -1;
-  width: 12vw;
+  width: 8em;
 }
 
 .intro-grid .gatsby,
 .intro-grid .netlify {
-  width: 30vw;
+  width: 16em;
 }
 
 ul {

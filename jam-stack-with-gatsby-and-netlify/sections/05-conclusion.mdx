@@ -10,8 +10,9 @@ import CustomLayout from '../components/layout'
 
 If you walk away with one thing from here today, may it be:
 
-"There is a way to build complex solutions in a simple manner"
-"There is a way if you want to ease yourself into React and GraphQL"
+"Performance matters"
+
+"There is a way to build and ship performance first projects with Gatsby"
 
 ```notes
 - I'd like you to take away with you...
@@ -72,6 +73,26 @@ export default Split
 ---
 
 export default CustomLayout
+
+<video
+  autoPlay={true}
+  muted={true}
+  playsInline=""
+  className="fade-in"
+  style={{ width: '100vw', position: 'relative' }}
+  onClick={e => {
+    e.target.pause()
+    e.target.currentTime = 0
+    e.target.load()
+    e.target.play()
+  }}
+>
+  <source
+    src="https://www.georgi-yanev.com/stuck-the-landing.webm"
+    type="video/webm"
+  />
+  Tap to play video
+</video>
 
 # I'm Georgi Yanev
 

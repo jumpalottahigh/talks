@@ -6,7 +6,7 @@ import DataSources from '../components/DataSources'
 <img
   src={require('file-loader!../assets/gatsby.svg')}
   className="full-screen"
-  style={{ maxWidth: '80vw', height: '22vh' }}
+  style={{ maxWidth: '80em', height: '7em' }}
   alt="Gatsby"
 />
 
@@ -52,34 +52,40 @@ import DataSources from '../components/DataSources'
 #### Someone might have claimed that Gatsby would pull off Lighthouse score of 70+ running on a toaster at CDN edge
 
 ```notes
-- Hot takes: can get a score of 70+ on a toaster at CDN Edge
-
-- if someone is looking for a side project :D
+- In fact, Gatsby is so performant,
+- [slide title]
 ```
 
 ---
 
-# TODO: But seriously, how fast is Gatsby?
+# But seriously, how fast is Gatsby?
 
-- TODO: put image of default starter lightouse score (and maybe a few other examples of real sites?)
-- follows PRPL pattern
-- Engineered for performance from the get-to
-- In legacy codebases we all know how hard it could be to work for performance - tech debt, a feature here, an improvement there
+<div>
+  <img
+    src={require('file-loader!../assets/lighthouse-gatsby-default.png')}
+    style={{ width: '70%', margin: '0 auto', display: 'flex' }}
+    alt="Gatsby default starter Lighthouse score"
+  />
+</div>
 
 ```notes
-
+- The default Gatsby starter comes with a score of 100 across the board in Lighthouse tests, so that should get you places
 ```
 
 ---
 
-# Why performance matters
+# #Perfmatters
 
-- TODO: refine those points
 - Performance = Money
 - Users are impatient
 - KPIs - bounce rates, real disappointments, real money
 - bandwidth is expensive
 - the next 1 billion user on the internet
+
+```notes
+- TODO: refine those points
+
+```
 
 ---
 
@@ -87,7 +93,7 @@ export default Split
 
 <div>
   <img
-    style={{ height: '80vh' }}
+    style={{ height: '18em' }}
     src={require('file-loader!../assets/webp-support.png')}
     alt="WebP image format support across browsers"
   />
@@ -102,14 +108,19 @@ export default Split
 - with or without alpha channel
 
 ```notes
+- Not gonna go super much in depth as to what all the things Gatsby does for you are, but
+
 - Doing images right is important. Images are 50-70% of page size in many cases
+
 - WebP has more and more support
+
+- gatsby-image gives you all that
 ```
 
 ---
 
 <img
-  style={{ maxHeight: '175px' }}
+  style={{ maxHeight: '7em' }}
   src={require('file-loader!../assets/react.svg')}
   alt="React"
 />
@@ -117,12 +128,14 @@ export default Split
 # One of the easiest ways to <span className="accent">try out React and/or GraphQL</span> with no prior experience
 
 <img
-  style={{ maxHeight: '175px' }}
+  style={{ maxHeight: '7em' }}
   src={require('file-loader!../assets/graphql.svg')}
   alt="GraphQL"
 />
 
 ```notes
+- A huge driving point to try Gatsby is if you want to try out React or GraphQL. Gatsby makes that very easy.
+
 - If you are a React veteran you will feel right at home
 
 - But even if you have never tried React, Gatsby is a great way to try it out.
@@ -131,7 +144,7 @@ export default Split
 
 ---
 
-# All React modules
+# All of React
 
 ```notes
 - Because Gatsby just uses React under the hood, that means that you can use ANY react module from NPM in your projects. Pretty neat!
@@ -139,13 +152,22 @@ export default Split
 
 ---
 
-<img
-  src={require('file-loader!../assets/gatsby-architecture.png')}
-  style={{ maxWidth: '80vw', maxHeight: '95vh' }}
-  alt="Gatsby architecture"
-/>
+<div>
+  <img
+    src={require('file-loader!../assets/gatsby-architecture.png')}
+    style={{
+      maxWidth: '75%',
+      maxHeight: '90%',
+      display: 'flex',
+      margin: '0 auto'
+    }}
+    alt="Gatsby architecture"
+  />
+</div>
 
 ```notes
+- How does Gatsby function
+
 - Architecture: fairly simple and many things are abstracted away from you and you do not need to understand them in detail
 
 - Fetch data from various sources
@@ -179,7 +201,7 @@ export default Split
 
 <img
   src={require('file-loader!../assets/gatsby-via-cli.png')}
-  style={{ maxWidth: '80vw', maxHeight: '95vh' }}
+  style={{ maxWidth: '80vw' }}
   alt="Gatsby via CLI"
 />
 
@@ -189,7 +211,7 @@ export default Split
 
 <img
   src={require('file-loader!../assets/gatsby-via-codesandbox.png')}
-  style={{ maxWidth: '80vw', maxHeight: '95vh' }}
+  style={{ maxHeight: '95vh' }}
   alt="Gatsby via CodeSandbox"
 />
 
@@ -247,6 +269,7 @@ https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gats
 
 ```notes
 - Cool, so going back to our diagram here, let's now have a look at the different data sources that Gatsby can source
+- so we can zoom in on and talk about data sources
 ```
 
 ---
@@ -263,10 +286,10 @@ https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gats
 
 ---
 
-# One of the easiest ways to <span className="accent">try out GraphQL</span> with no prior experience
+# Let's try out <span className="accent">GraphQL</span>
 
 ```notes
-- Gatsby sources all that data and exposes GraphQL types to you to query against
+- Gatsby sources all that data and exposes GraphQL types for you to query against
 ```
 
 ---
@@ -444,7 +467,13 @@ TODO: Build a site that generates 1000 pages and images in 3 minutes or less
 
 export default Split
 
-<img src={require('file-loader!../assets/gatsby-swag.png')} alt="Gatsby swag" />
+<div>
+  <img
+    src={require('file-loader!../assets/gatsby-swag.png')}
+    alt="Gatsby swag"
+    style={{ maxWidth: '100%' }}
+  />
+</div>
 
 # Contribute
 
