@@ -1,4 +1,4 @@
-import { Split } from 'mdx-deck/layouts'
+import { Split, Invert } from 'mdx-deck/layouts'
 import { Appear, Head, Image } from 'mdx-deck'
 import CustomLayout from '../components/layout'
 
@@ -13,6 +13,9 @@ If you walk away with one thing from here today, may it be:
 "Performance matters"
 
 "There is a way to build and ship performance first projects with Gatsby"
+
+I hope I have inspired you to go build something or learn something new today.
+Go setup and deploy your next JAMstack project in a few minutes and jump in straight into the actual building of the app.
 
 ```notes
 - I'd like you to take away with you...
@@ -31,6 +34,49 @@ TODO: refine
 ```notes
 - if you wanna continue the discussion or are interesteed in flying FPV drones or how I write a book you can reach out here
 ```
+
+---
+
+export default Invert
+
+<div className="split-images">
+  <img
+    src={require('file-loader!../assets/github-profile.png')}
+    alt="jumpalottahigh GitHub profile"
+    onLoad={e => {
+      e.target.style.transform = `rotate(${
+        Math.random() > 0.5 ? Math.random() * 20 : Math.random() * -20
+      }deg)`
+    }}
+  />
+  <img
+    src={require('file-loader!../assets/drone-1.jpg')}
+    alt="Drone build 1"
+    onLoad={e => {
+      e.target.style.transform = `rotate(${
+        Math.random() > 0.5 ? Math.random() * 20 : Math.random() * -20
+      }deg)`
+    }}
+  />
+  <img
+    src={require('file-loader!../assets/drone-2.jpg')}
+    alt="Drone build 2"
+    onLoad={e => {
+      e.target.style.transform = `rotate(${
+        Math.random() > 0.5 ? Math.random() * 20 : Math.random() * -20
+      }deg)`
+    }}
+  />
+  <img
+    src={require('file-loader!../assets/github-prs.png')}
+    alt="jumpalottahigh GitHub PRs"
+    onLoad={e => {
+      e.target.style.transform = `rotate(${
+        Math.random() > 0.5 ? Math.random() * 20 : Math.random() * -20
+      }deg)`
+    }}
+  />
+</div>
 
 ---
 

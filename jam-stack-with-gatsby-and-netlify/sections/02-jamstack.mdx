@@ -91,12 +91,12 @@ export default Invert
 
 # Core ideas
 
-- 📈 Better Performance
-- 🔐 Higher Security
-- 💵 Cheaper, Easier Scaling
-- 😍 Better Developer Experience
-
-TODO: make images bigger, spread them around in 2x2 grid
+<div className="jamstack__core-ideas">
+  <div>📈 Better Performance</div>
+  <div>🔐 Higher Security</div>
+  <div>💵 Cheaper, Easier Scaling</div>
+  <div>😍 Better Developer Experience</div>
+</div>
 
 ```notes
 - This is the more interesting part.
@@ -116,7 +116,7 @@ TODO: make images bigger, spread them around in 2x2 grid
 
 ---
 
-# What JAMstack is NOT?
+# What the JAMstack is NOT?
 
 - Not a silver bullet
 - Not about specific framework or library (bring your own)
@@ -144,15 +144,17 @@ TODO: make images bigger, spread them around in 2x2 grid
 
 ---
 
-### Check out this comparison of rendering strategies
+export default Split
 
-<TwitterTweetEmbed
-  tweetId="1093223382223605762"
-  options={{ height: 800 }}
-  style={{ width: '100vw', height: '100vh' }}
-/>
+<div style={{ textAlign: 'right', paddingRight: '2em' }}>
+  <img
+    src={require('file-loader!../assets/tweet-1.png')}
+    alt="JAMstack examples"
+    style={{ textAlign: 'right', height: '26em' }}
+  />
+</div>
 
-TODO: consider making the tweet(s) into pictures to have them biger
+# Comparison of different rendering strategies
 
 ```notes
 
@@ -164,13 +166,26 @@ TODO: consider making the tweet(s) into pictures to have them biger
 ---
 
 <img
-  src={require('file-loader!../assets/infographic.png')}
+  src={require('file-loader!../assets/infographic-1.png')}
   className="full-screen"
   alt="Server vs Browser rendering diagram"
-  style={{ maxHeight: '90vh' }}
+  style={{ maxHeight: '87vh' }}
 />
 
-TODO: add animation to select the correct column on the table
+```notes
+- In particular this infographic where they compare some PROs and CONs of different rendering approaches is quite interesting.
+
+- We don't have too much time to go too much in depth during this talk, but feel free to research the topic further if interested.
+```
+
+---
+
+<img
+  src={require('file-loader!../assets/infographic-2.png')}
+  className="full-screen"
+  alt="Server vs Browser rendering diagram, Gatsby highlighted"
+  style={{ maxHeight: '87vh' }}
+/>
 
 ```notes
 - In particular this infographic where they compare some PROs and CONs of different rendering approaches is quite interesting.

@@ -47,13 +47,15 @@ import DataSources from '../components/DataSources'
 
 ---
 
-<TwitterTweetEmbed tweetId="1083999310168162304" />
-
-#### Someone might have claimed that Gatsby would pull off Lighthouse score of 70+ running on a toaster at CDN edge
+<img
+  src={require('file-loader!../assets/tweet-2.png')}
+  style={{ height: '87vh' }}
+  alt="Tweet 2"
+/>
 
 ```notes
 - In fact, Gatsby is so performant,
-- [slide title]
+- Someone might have even claimed that Gatsby would pull off Lighthouse score of 70+ running on a toaster at CDN edge
 ```
 
 ---
@@ -69,6 +71,7 @@ import DataSources from '../components/DataSources'
 </div>
 
 ```notes
+- Plenty
 - The default Gatsby starter comes with a score of 100 across the board in Lighthouse tests, so that should get you places
 ```
 
@@ -76,16 +79,22 @@ import DataSources from '../components/DataSources'
 
 # #Perfmatters
 
-- Performance = Money
+- Your users and Your business
+- Performance, Speed, User Satisfaction translate to Money
+- SEO benefits as of July 2018
 - Users are impatient
-- KPIs - bounce rates, real disappointments, real money
-- bandwidth is expensive
-- the next 1 billion user on the internet
+- Alternatively slow sites lead to increased bounce rates
+- The next 1 billion users on the internet are coming
+- Bandwidth is expensive
 
 ```notes
-- TODO: refine those points
-- TODO: mention being faster than competitors and page speed as part of Google ranking score
+- Many reasons why to care for performance, but boils down to your users and your business
 
+- Page speed is part of Google page ranking scores now
+
+- Wouldn't it be nice to be faster than your competition?
+
+- Future users might be coming from places with flaky connection and where bandwidth is expensive
 ```
 
 ---
@@ -161,7 +170,7 @@ export default Split
 
 <div>
   <img
-    src={require('file-loader!../assets/gatsby-architecture.png')}
+    src={require('file-loader!../assets/gatsby-architecture-1.png')}
     style={{
       maxWidth: '75%',
       maxHeight: '52em',
@@ -268,13 +277,18 @@ https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gats
 
 ---
 
-<img
-  src={require('file-loader!../assets/gatsby-architecture.png')}
-  style={{ maxWidth: '80vw', maxHeight: '95vh' }}
-  alt="Gatsby architecture"
-/>
-
-TODO: Circle the Data section
+<div>
+  <img
+    src={require('file-loader!../assets/gatsby-architecture-2.png')}
+    style={{
+      maxWidth: '75%',
+      maxHeight: '52em',
+      display: 'flex',
+      margin: '0 auto'
+    }}
+    alt="Gatsby architecture focused on data sources"
+  />
+</div>
 
 ```notes
 - Cool, so going back to our diagram here, let's now have a look at the different data sources that Gatsby can source
@@ -402,8 +416,6 @@ export default Invert
 />
 
 ```notes
-- TODO: move this slide to the beginning of the Gatsby stuff to increase interest?
-
 - If you are looking for inspiration
 
 - Submit your own projects to the showcase if you like
@@ -411,40 +423,114 @@ export default Invert
 
 ---
 
-# TODO: What can you build with Gatsby?
+# What can you build with Gatsby?
 
-- Landing pages
-- Ecommerce
-- PWAs
+---
 
-Examples
+### Simple sites
 
-- elementsofai
-- store.gatsbyjs.org
-- TODO: add lighthouse images per each
+<img
+  src={require('file-loader!../assets/showcase-2.png')}
+  style={{ maxWidth: '85vw', maxHeight: '87vh' }}
+  alt="Gatsby showcase 2"
+/>
 
-```notes
-- notes here
-```
+---
+
+### Sites with plenty of high quality imagery
+
+<img
+  src={require('file-loader!../assets/showcase-1.jpg')}
+  style={{ maxWidth: '85vw', maxHeight: '87vh' }}
+  alt="Gatsby showcase 1"
+/>
+
+---
+
+### Data visualization heavy apps
+
+<img
+  src={require('file-loader!../assets/showcase-3.jpg')}
+  style={{ maxWidth: '85vw', maxHeight: '87vh' }}
+  alt="Gatsby showcase 3"
+/>
+
+---
+
+### Ecommerce
+
+<img
+  src={require('file-loader!../assets/showcase-4.jpg')}
+  style={{ maxWidth: '85vw', maxHeight: '87vh' }}
+  alt="Gatsby showcase 4"
+/>
+
+---
+
+### Blog
+
+<img
+  src={require('file-loader!../assets/showcase-5.jpg')}
+  style={{ maxWidth: '85vw', maxHeight: '87vh' }}
+  alt="Gatsby showcase 5"
+/>
+
+---
+
+### Documentation sites
+
+<img
+  src={require('file-loader!../assets/showcase-6.png')}
+  style={{ maxWidth: '85vw', maxHeight: '87vh' }}
+  alt="Gatsby showcase 6"
+/>
 
 ---
 
 # My projects and learnings
 
-- TODO: write information
-- bring the tools as you need them, don't get locked to stacks and technologies if you dont want to
-- easily swap out a headless CMS for another one
+```notes
+- I've also built a few projects with Gatsby and really loved it
+```
 
 ---
 
-# Showcase of some of my projects
+### fpvtips.com
 
-- solve practical problems - generate THOUSANDS OF images and make a super performant page in a few minutes and less than 50 lines of code. So powerful!: campaign-catalog
-- generate hundreds of pages hassle free: baehrbg.com
-- fpvtips
+<img
+  src={require('file-loader!../assets/georgi-showcase-1.jpg')}
+  style={{ maxWidth: '85vw', maxHeight: '87vh' }}
+  alt="Georgi showcase 1"
+/>
+
+---
+
+### blog.georgi-yanev.com
+
+<img
+  src={require('file-loader!../assets/georgi-showcase-2.jpg')}
+  style={{ maxWidth: '85vw', maxHeight: '87vh' }}
+  alt="Georgi showcase 2"
+/>
 
 ```notes
-- gatsby can be very powerful - show example of a copy of the campaign catalog site to show how far you can get just with 10 lines of code. maybe with rendering sub pages for each of those sites too? 600+ pages real quick?
+Blog with analytics and video on the home page and still 99 score
+```
+
+---
+
+### baehrbg.com
+
+<img
+  src={require('file-loader!../assets/georgi-showcase-3.jpg')}
+  style={{ maxWidth: '85vw', maxHeight: '87vh' }}
+  alt="Georgi showcase 3"
+/>
+
+```notes
+Generate hundreds of pages from Contentful models
+
+Hundreds of pages, prob almost a thousand, many images
 ```
 
 ---
@@ -454,6 +540,8 @@ Examples
 TODO: Build a site that generates 1000 pages and images in 3 minutes or less
 
 ```notes
+- TODO: because the Gatsby showcase is built with "live" screenshots from sites, we can use the same plugin to build something of our own
+
 - Maybe default starter + yaml into a demo of campaign catalog type of thing?
 ```
 

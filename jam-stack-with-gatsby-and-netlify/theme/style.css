@@ -32,12 +32,12 @@ h4 {
 
 .intro-grid .jam {
   grid-row: 1 / -1;
-  width: 8em;
+  width: 9em;
 }
 
 .intro-grid .gatsby,
 .intro-grid .netlify {
-  width: 16em;
+  width: 18em;
 }
 
 ul {
@@ -110,4 +110,19 @@ ul.intro-self .github {
   max-height: 45vh;
   border-radius: 10px;
   box-shadow: 2px 2px 10px 3px #4d5054;
+}
+
+.jamstack__core-ideas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  /* height: 18em; */
+  font-size: 1.8em;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.jamstack__core-ideas div {
+  padding: 0.8em;
+  border: 1px solid #fafafa;
 }
