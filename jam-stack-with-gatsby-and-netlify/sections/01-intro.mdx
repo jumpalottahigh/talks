@@ -52,12 +52,12 @@ export default CustomLayout
 export default CustomLayout
 
 <div className="intro-grid">
+  <img
+    src={require('file-loader!../assets/jam.png')}
+    className="jam"
+    alt="JAMstack"
+  />
   <Appear>
-    <img
-      src={require('file-loader!../assets/jam.png')}
-      className="jam"
-      alt="JAMstack"
-    />
     <img
       src={require('file-loader!../assets/gatsby.svg')}
       className="gatsby"
