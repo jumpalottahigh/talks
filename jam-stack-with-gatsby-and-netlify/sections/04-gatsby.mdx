@@ -55,6 +55,7 @@ import DataSources from '../components/DataSources'
 
 ```notes
 - In fact, Gatsby is so performant,
+
 - Someone might have even claimed that Gatsby would pull off Lighthouse score of 70+ running on a toaster at CDN edge
 ```
 
@@ -72,6 +73,7 @@ import DataSources from '../components/DataSources'
 
 ```notes
 - Plenty
+
 - The default Gatsby starter comes with a score of 100 across the board in Lighthouse tests, so that should get you places
 ```
 
@@ -112,44 +114,39 @@ export default Split
 
 ## How does Gatsby help?
 
+- up to 70% of traffic could be images [TODO: back up data]
 - <span className="accent">gatsby-image</span> is a highly optimized lazy loading image component
 - can serve WebP to browsers that support it
 - WebP could be up to half the size
-- with or without alpha channel
 
 ```notes
-- Not gonna go super much in depth as to what all the things Gatsby does for you are, but
-
 - Doing images right is important. Images are 50-70% of page size in many cases
 
-- WebP has more and more support
+- lazy loading of images in viewport, preload base64 small low quality image for blur up effect or traced svg effect
 
-- gatsby-image gives you all that
+- WebP has more and more support
 ```
 
 ---
 
 <img
-  style={{ maxHeight: '7em' }}
+  style={{ maxHeight: '6em' }}
   src={require('file-loader!../assets/react.svg')}
   alt="React"
 />
 
-# One of the easiest ways to <span className="accent">try out React and/or GraphQL</span> with no prior experience
+### One of the easiest ways to <span className="accent">try out React and/or GraphQL</span> with no prior experience
 
 <img
-  style={{ maxHeight: '7em' }}
+  style={{ maxHeight: '6em' }}
   src={require('file-loader!../assets/graphql.svg')}
   alt="GraphQL"
 />
 
 ```notes
-- A huge driving point to try Gatsby is if you want to try out React or GraphQL. Gatsby makes that very easy.
+- I think it's worth mentioning this, because many people come to Gatsby to try React or GraphQL
 
-- If you are a React veteran you will feel right at home
-
-- But even if you have never tried React, Gatsby is a great way to try it out.
-
+- And rightfully so, you don't need to know a lot of React or GraphQL to get started with Gatsby
 ```
 
 ---
@@ -182,13 +179,11 @@ export default Split
 </div>
 
 ```notes
-- How does Gatsby function
-
-- Architecture: fairly simple and many things are abstracted away from you and you do not need to understand them in detail
+- I find this diagram from gatsbyjs.org quite useful to help understand the basic idea
 
 - Fetch data from various sources
 
-- Process data and expose GraphQL schema for querying
+- Process data and expose GraphQL types for querying in your app
 
 - Build your app with React components
 
@@ -197,18 +192,12 @@ export default Split
 
 ---
 
-# Before we dive deeper into the architecture...
+# How to get started?
 
 ```notes
-... let's look at how we can start a Gatsby project.
-```
+- Cool, so how do we get started with a Gatsby project?
 
----
-
-# 3 easy ways to get started
-
-```notes
-3 ways of trying out Gatsby quickly:
+- I'll show you 3 ways of trying out Gatsby quickly:
 ```
 
 ---
@@ -230,24 +219,6 @@ export default Split
   style={{ maxHeight: '95vh' }}
   alt="Gatsby via CodeSandbox"
 />
-
----
-
-### Look for the green Netlify deploy button
-
-<img
-  src={require('file-loader!../assets/gatsby-via-button.png')}
-  style={{ height: '200px' }}
-  alt="Gatsby via deploy button"
-/>
-
-### Or pass a starter repository to Netlify via:
-
-https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default
-
-```notes
-
-```
 
 ---
 
@@ -277,6 +248,24 @@ https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gats
 
 ---
 
+### Look for the green Netlify deploy button
+
+<img
+  src={require('file-loader!../assets/gatsby-via-button.png')}
+  style={{ height: '200px' }}
+  alt="Gatsby via deploy button"
+/>
+
+### Or pass a starter repository to Netlify via:
+
+https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default
+
+```notes
+- In particular if you are deploying to Netlify, just look for the deploy button on many gatsby starter repositories
+```
+
+---
+
 <div>
   <img
     src={require('file-loader!../assets/gatsby-architecture-2.png')}
@@ -291,8 +280,7 @@ https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gats
 </div>
 
 ```notes
-- Cool, so going back to our diagram here, let's now have a look at the different data sources that Gatsby can source
-- so we can zoom in on and talk about data sources
+- Cool, so now that we know how to get started, let's go back to this diagram and explore the data sources part
 ```
 
 ---
@@ -300,6 +288,8 @@ https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gats
 <DataSources />
 
 ```notes
+- Plenty to choose from; Most popular headless CMSs
+
 - Any data source; There's quite a few of them
 
 - Build pages from Google sheets or Trello cards wut?
@@ -319,8 +309,16 @@ https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gats
 
 # Demo
 
+---
+
+<img
+  src={require('file-loader!../assets/codesandbox-json-example.jpg')}
+  style={{ height: '55vh' }}
+  alt="Example JSON files"
+/>
+
 ```notes
-TODO: come up with concrete examples to query; set them up in the codesandbox
+- A couple of example JSON files in a codesandbox project
 ```
 
 ---
@@ -338,6 +336,10 @@ export default Invert
   }}
   sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
 />
+
+```notes
+- There is a convention to how type names get generated (all-, -Json)
+```
 
 ---
 
@@ -367,8 +369,6 @@ export default Invert
 
 - Things like Google Analytics, for example. No need to reinvent the wheel. Use the highly optimized and supported plugin.
 
-- 2 special categories of plugins - Source and Transformer plugins
-
 - Source that fetch data at build time
 
 - Transformers that process data, for example a JSON file
@@ -387,9 +387,11 @@ export default Invert
 />
 
 ```notes
-- Finally if you really can't be bothered to setup something from scratch, there are plenty of pre-configured starters for particular use cases
+- start from a configured project with plugins based on usecase
 
-- For example: by data provider, styling solution, SEO requirements and more.
+- blog, ecommerce, what have you
+
+- or by data provider, styling solution, SEO requirements and more.
 
 - The one major downside is that once you setup a project using a starter you are on your own and don't get anymore updates
 
@@ -416,7 +418,7 @@ export default Invert
 />
 
 ```notes
-- If you are looking for inspiration
+- Browse for inspiration
 
 - Submit your own projects to the showcase if you like
 ```
@@ -515,6 +517,10 @@ export default Invert
   alt="Georgi showcase 1"
 />
 
+```notes
+- contentful (build hooks), markdown, google maps, open weather api, json data
+```
+
 ---
 
 ### blog.georgi-yanev.com
@@ -526,7 +532,9 @@ export default Invert
 />
 
 ```notes
-Blog with analytics and video on the home page and still 99 score
+- Markdown page generation, will add mdx
+- dark theme, custom components, playground for learning
+- Blog with analytics and video on the home page and still 99 score
 ```
 
 ---
@@ -540,9 +548,9 @@ Blog with analytics and video on the home page and still 99 score
 />
 
 ```notes
-Generate hundreds of pages from Contentful models
+- Generate hundreds of pages from Contentful models
 
-Hundreds of pages, prob almost a thousand, many images
+- Hundreds of pages, prob almost a thousand, many images
 ```
 
 ---

@@ -117,8 +117,7 @@ ul.intro-self .github {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  /* height: 18em; */
-  font-size: 1.8em;
+  font-size: 1.6em;
   max-width: 80%;
   margin: 0 auto;
 }
