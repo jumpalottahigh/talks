@@ -4,36 +4,95 @@ import CustomLayout from '../components/layout'
 
 # Conclusion
 
----
-
-# Takeaway
-
-If you walk away with one thing from here today, may it be:
-
-"Performance matters"
-
-"There is a way to build and ship performance first projects with Gatsby"
-
-I hope I have inspired you to go build something or learn something new today.
-Go setup and deploy your next JAMstack project in a few minutes and jump in straight into the actual building of the app.
+1. Performance matters
+2. Building things with Gatsby and Netlify is fun
+3. Go build something
 
 ```notes
-- I'd like you to take away with you...
+- In conclusion I hope I managed to drive these points home
+
+- As a side note, I feel like there is a direct correlation between the amount of projects I have worked on and the time I started using Netlify
 ```
 
 ---
 
-# Continue the discussion
+### Thank you!
 
-TODO: refine
+### Let's continue the discussion on
 
-- @jumpalottahigh on Twitter I tweet about web dev, performance and javascript
-- Stream a few times a week hobby project work, usually React but also sometimes vanilla JS
-- @jumpalottahigh on Twitter, GitHub, Twitch, pretty much everywhere
+<div style={{ display: 'flex', marginBottom: '0.2rem' }}>
+  <img
+    src={require('file-loader!../assets/twitter-blue.png')}
+    style={{ height: '40px', marginRight: '0.5em' }}
+    alt="Twitter"
+  />
+  <a href="https://gyanev.com/twitter" target="_blank" rel="noreferrer">
+    https://gyanev.com/twitter
+  </a>
+</div>
+
+<div style={{ display: 'flex', marginBottom: '0.2rem' }}>
+  <img
+    src={require('file-loader!../assets/github.svg')}
+    style={{ height: '40px', marginRight: '0.5em' }}
+    alt="GitHub"
+  />
+  <a href="https://gyanev.com/github" target="_blank" rel="noreferrer">
+    https://gyanev.com/github
+  </a>
+</div>
+
+<div style={{ display: 'flex', marginBottom: '0.2rem' }}>
+  <img
+    src={require('file-loader!../assets/twitch.png')}
+    style={{ height: '40px', marginRight: '0.5em' }}
+    alt="Twitch"
+  />
+  <a href="https://gyanev.com/twitch" target="_blank" rel="noreferrer">
+    https://gyanev.com/twitch
+  </a>
+</div>
+
+<div style={{ display: 'flex', marginBottom: '0.2rem' }}>
+  <img
+    src={require('file-loader!../assets/youtube.png')}
+    style={{ height: '40px', marginRight: '0.5em' }}
+    alt="YouTube"
+  />
+  <a href="https://gyanev.com/georgi-codes" target="_blank" rel="noreferrer">
+    https://gyanev.com/georgi-codes
+  </a>
+</div>
+
+#### Happy to also talk about
+
+###### 🚁 Flying FPV drones
+
+###### ✍ Writing a book
+
+###### 🔁 Contributing to OSS
 
 ```notes
-- if you wanna continue the discussion or are interesteed in flying FPV drones or how I write a book you can reach out here
+- I'm happy to connect and continue the discussion on Twitter and GitHub, or in person
+
+- I also live stream on Twitch
+
+- Have recently started uploading educational content on YouTube
 ```
+
+---
+
+# References
+
+<div style={{fontSize: '0.5em'}}>
+
+- https://developers.google.com/web/updates/2019/02/rendering-on-the-web
+- https://blogs.windows.com/msedgedev/2018/10/04/edgehtml-18-october-2018-update/
+- https://bugzilla.mozilla.org/show_bug.cgi?id=1294490
+- https://www.chromestatus.com/feature/5641405942726656
+- https://www.gatsbyjs.org/
+
+</div>
 
 ---
 
@@ -77,139 +136,3 @@ export default Invert
     }}
   />
 </div>
-
----
-
-export default Split
-
-<video
-  autoPlay={true}
-  muted={true}
-  playsInline=""
-  className="fade-in"
-  style={{ maxWidth: '50vw' }}
-  onClick={e => {
-    e.target.pause()
-    e.target.currentTime = 0
-    e.target.load()
-    e.target.play()
-  }}
->
-  <source
-    src="https://www.georgi-yanev.com/power-looping-all-day.webm"
-    type="video/webm"
-  />
-  {/* <source
-    src="https://www.georgi-yanev.com/stuck-the-landing.webm"
-    type="video/webm"
-  /> */}
-  Tap to play video
-</video>
-
-### TODO: move some of the material from the next few slides to the end of the presentation
-
-### 🚁 Flying FPV drones
-
-### ✍ Writing a book
-
-### 🔁 Contribute to OSS
-
-### 📡 Stream on Twitch
-
-### 🎥 Upload dev tips videos to YouTube
-
----
-
-export default CustomLayout
-
-<video
-  autoPlay={true}
-  muted={true}
-  playsInline=""
-  className="fade-in"
-  style={{ width: '100vw', position: 'relative' }}
-  onClick={e => {
-    e.target.pause()
-    e.target.currentTime = 0
-    e.target.load()
-    e.target.play()
-  }}
->
-  <source
-    src="https://www.georgi-yanev.com/stuck-the-landing.webm"
-    type="video/webm"
-  />
-  Tap to play video
-</video>
-
-# I'm Georgi Yanev
-
-#### 💜 the Web, #perfmatters 🚀
-
-<ul className="intro-self">
-  <Appear>
-    <li>
-      <span className="accent m-x">Web Developer</span> @
-      <a href="https://www.f-secure.com/home">
-        <img
-          className="f-secure"
-          src="https://www.f-secure.com/documents/assets/images/logo-f-secure-black.svg"
-          alt="F-Secure"
-        />
-      </a>
-    </li>
-    <li>
-      <span className="accent m-x">@jumpalottahigh</span> on
-      <a href="https://twitter.com/jumpalottahigh">
-        <img
-          src={require('file-loader!../assets/twitter.svg')}
-          className="twitter"
-          alt="Twitter"
-        />
-      </a>
-      and
-      <a href="https://github.com/jumpalottahigh">
-        <img
-          src={require('file-loader!../assets/github.svg')}
-          className="github"
-          alt="GitHub"
-        />
-      </a>
-    </li>
-    <li>
-      <img
-        src="https://blog.georgi-yanev.com/static/1936ea7727b408fdfad97f772452f62c/bc04a/logo.png"
-        className=""
-        alt="Georgi Yanev blog icon"
-      />
-      <span className="m-x"> at </span>
-      <a href="https://gyanev.com/blog">gyanev.com/blog</a>
-    </li>
-  </Appear>
-</ul>
-
-```notes
-
-```
-
----
-
-# Thank you
-
----
-
-# Questions
-
----
-
-# References
-
-https://developers.google.com/web/updates/2019/02/rendering-on-the-web
-
-https://blogs.windows.com/msedgedev/2018/10/04/edgehtml-18-october-2018-update/
-
-https://bugzilla.mozilla.org/show_bug.cgi?id=1294490
-
-https://www.chromestatus.com/feature/5641405942726656
-
-https://www.gatsbyjs.org/

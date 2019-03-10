@@ -19,6 +19,10 @@ h6 {
   text-align: center;
 }
 
+h6 {
+  margin: 0;
+}
+
 .twitter-tweet {
   margin: 0 auto;
 }
