@@ -1,5 +1,7 @@
 # The slides for my talks
 
+1. [JAMstack with Gatsby and Netlify](jam-stack-with-gatsby-and-netlify/README.md)
+
 ## Social Links
 
 - [www.georgi-yanev.com](https://www.georgi-yanev.com)

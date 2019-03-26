@@ -1,7 +1,7 @@
-# jam-stack-with-gatsby-and-netlify
+# JAMstack with Gatsby and Netlify
 
-Delivered at Frontend Finland
-Delivered at HelsinkiJS
+- Delivered at Frontend Finland
+- Delivered at HelsinkiJS
 
 ## Social Links
 
